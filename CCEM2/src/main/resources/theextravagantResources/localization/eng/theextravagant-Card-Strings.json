@@ -1,0 +1,455 @@
+{
+  "theextravagant:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff22ff]works.[]"
+  },
+  "theextravagant:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !theextravagant:ENERGY_DAMAGE! damage total.)"
+  },
+  "theextravagant:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !theextravagant:SecondMagic! poison to an enemy."
+  },
+  "theextravagant:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theextravagant:SlyStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theextravagant:Clairvoyance": {
+    "NAME": "Clairvoyance",
+    "DESCRIPTION": "When drawn, Scry !M!.[] NL Next turn draw !M! cards."
+  },
+
+  "theextravagant:Triumph": {
+    "NAME": "Triumph",
+    "DESCRIPTION": "theextravagant:Heavy. NL When drawn, your next Attack deals !M! additional damage[]. NL Gain !B! Block."
+  },
+
+  "theextravagant:Fence": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+
+  "theextravagant:Twostep": {
+    "NAME": "Twostep",
+    "DESCRIPTION": "When drawn, NL theextravagant:Delay - 3 Skills: NL Gain !B! Block. NL Draw !M! cards."
+  },
+
+  "theextravagant:Reconsider": {
+    "NAME": "Reconsider",
+    "DESCRIPTION": "Discard !M! card. If you discard an Attack gain Strength equal to its cost.",
+    "UPGRADE_DESCRIPTION": "Discard up to !M! cards. If you discard an Attack gain Strength equal to its cost."
+  },
+
+  "theextravagant:SkillfullDodge":
+  {
+    "NAME": "Skillfull Dodge",
+    "DESCRIPTION": "theextravagant:Delay - 3 Skills: gain !B! Block. NL theextravagant:Delay - 6 Skills: Gain !B! Block."
+  },
+  "theextravagant:Ambush": {
+    "NAME": "Ambush",
+    "DESCRIPTION": "Ethereal. NL The first Attack you play each turn deals double damage."
+  },
+  "theextravagant:GustOfWind": {
+    "NAME": "Gust of Wind",
+    "DESCRIPTION": "Retain. NL Deal !D! damage !M! times. NL Exhaust."
+  },
+  "theextravagant:SnakeOil": {
+    "NAME": "Snek Oil",
+    "DESCRIPTION": "Shuffle 3 Slimed into your draw pile. NL theextravagant:Delay - 3 Slimed: Heal !M! Hp. NL Exhaust."
+  },
+  "theextravagant:Cutthroat": {
+    "NAME": "Cutthroat",
+    "DESCRIPTION": "Deal !D! damage. NL Deals triple damage if you played no cards this turn."
+  },
+  "theextravagant:SwiftSwitch": {
+    "NAME": "Swift Switch",
+    "DESCRIPTION": "Draw !M! cards. Put 1 card from your discard pile on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. Put 1 card from your discard pile on top of your draw pile. It costs 0 [E] until played."
+  },
+  "theextravagant:ButtonUp": {
+    "NAME": "Suit up",
+    "DESCRIPTION": "When drawn, gain !B! Block.[] NL Draw !M! cards."
+  },
+  "theextravagant:Pluck":
+  {
+    "NAME": "Pluck",
+    "DESCRIPTION": "Draw !M! cards. They cost 0 and Exhaust when played."
+  },
+  "theextravagant:SpontaneousStrike":
+  {
+    "NAME": "Spontaneous Strike",
+    "DESCRIPTION": "When drawn, deal !M! damage to a random enemy. NL Deal !D! damage."
+  },
+  "theextravagant:DAMNATION":
+  {
+    "NAME": "Damnation",
+    "DESCRIPTION": "theextravagant:Delay - !M! Attacks: Deal 200 damage to all enemies."
+  },
+  "theextravagant:RiskyStrike":
+  {
+    "NAME": "Risky Strike",
+    "DESCRIPTION": "Deal !D! damage. NL theextravagant:Delay - !M! cards: Discard your hand."
+  },
+  "theextravagant:ReSeek":
+  {
+    "NAME": "Re-Seek",
+    "DESCRIPTION": "Fetch !M! cards from your discard pile."
+  },
+  "theextravagant:Aggression":
+  {
+    "NAME": "Impale",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain [E] next turn."
+  },
+  "theextravagant:PuffUp":
+  {
+    "NAME": "PuffUp",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL Gain !M! Strength, lose !M! Strength at the end of your turn."
+  },
+  "theextravagant:Sixteen_Tons":
+  {
+    "NAME": "16 Tons",
+    "DESCRIPTION": "Autoplay. NL theextravagant:Heavy. NL Deal 16 damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Autoplay. NL Deal 16 damage to a random enemy."
+  },
+  "theextravagant:CutTheDeck": {
+    "NAME": "Cut the Deck",
+    "DESCRIPTION": "At the start of your turn, draw a card and put it at the bottom of your draw pile !M! times."
+  },
+  "theextravagant:TwilightTone":
+  {
+    "NAME": "Twilight Tone",
+    "DESCRIPTION": "Lose !M! Max. HP. NL Permanently Upgrade a card in your deck. NL Exhaust."
+  },
+  "theextravagant:Retreat":
+  {
+    "NAME": "Retreat",
+    "DESCRIPTION": "At the end of this turn put all cards in your hand into your draw pile and gain !B! Block for each."
+  },
+  "theextravagant:WhiffOfMagic":
+  {
+    "NAME": "Whiff of Magic",
+    "DESCRIPTION": "At the end of your turn, theextravagant:Enchant all Powers in your hand and discard them."
+  },
+  "theextravagant:Flashback":
+  {
+    "NAME": "Flashback",
+    "DESCRIPTION": "When drawn, Fetch all Flashbacks from your discard pile. NL Gain !B! Block."
+  },
+  "theextravagant:TreasureHunt": {
+    "NAME": "Treasure Hunt",
+    "DESCRIPTION": "Choose 1 out of 3 random rare cards of any color to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 out of 3 random upgraded rare cards of any color to add to your hand. NL Exhaust."
+  },
+  "theextravagant:ZeroHero": {
+    "NAME": "Zero Hero",
+    "DESCRIPTION": "Deal !D! damage. NL theextravagant:Delay - 3 0-cost cards: Gain !M! Strength."
+  },
+  "theextravagant:Glamour": {
+    "NAME": "Jewels",
+    "DESCRIPTION": "Ethereal. NL When drawn, ALL enemies lose !M! Strength this turn. NL Gain !B! Block."
+  },
+  "theextravagant:Meditation": {
+    "NAME": "Channel",
+    "DESCRIPTION": "Put a theextravagant:Spark on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "theextravagant:Light. NL Put a theextravagant:Spark on top of your draw pile. NL Exhaust."
+  },
+  "theextravagant:FocusStab": {
+    "NAME": "Focus Stab",
+    "DESCRIPTION": "When drawn, reduce this cards cost by 1 this combat.[] NL Deal !D! damage. NL gain !M! Strength."
+  },
+  "theextravagant:Invocation": {
+    "NAME": "Invocation",
+    "DESCRIPTION": "Retain. NL Fetch !M! card from your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Fetch !M! cards from your draw pile. NL Exhaust."
+  },
+  "theextravagant:GlyphOfSight": {
+    "NAME": "Glyph of Light",
+    "DESCRIPTION": "At the start of each turn shuffle a theextravagant:Spark into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn shuffle a theextravagant:Spark into your draw pile."
+  },
+  "theextravagant:Accumulation": {
+    "NAME": "Accumulation",
+    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+  },
+  "theextravagant:GlyphOfChoice": {
+    "NAME": "Glyph of Choice",
+    "DESCRIPTION": "At the start of each turn draw 1 card and put 1 card from your hand on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn draw 1 card and put 1 card from your hand on top of your draw pile."
+  },
+  "theextravagant:Acceleration": {
+    "NAME": "Acceleration",
+    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Lose !M! Strength at the end of your turn. NL Exhaust."
+  },
+  "theextravagant:GlyphOfPower": {
+    "NAME": "Glyph of Power",
+    "DESCRIPTION": "At the start of each turn lose [E] and add an Upgraded theextravagant:Acceleration into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn lose [E] and add an Upgraded theextravagant:Acceleration into your hand."
+  },
+  "theextravagant:Preservation": {
+    "NAME": "Preservation",
+    "DESCRIPTION": "Retain. NL Retain !M! card this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Retain !M! cards this turn. NL Exhaust."
+  },
+  "theextravagant:GlyphOfTime": {
+    "NAME": "Glyph of Time",
+    "DESCRIPTION": "Whenever you play 10 cards, Gain 1 Strength."
+  },
+  "theextravagant:Pushthrough": {
+    "NAME": "Push Through",
+    "DESCRIPTION": "Gain !B! Block. NL theextravagant:Delay - 4 Attacks: NL Gain [E].",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL theextravagant:Delay - 4 Attacks: NL Gain [E] [E]."
+  },
+  "theextravagant:Strafe": {
+    "NAME": "Strafe",
+    "DESCRIPTION": "Gain !B! Block for each card in your hand that costs 0."
+  },
+  "theextravagant:IronPlumes": {
+    "NAME": "Iron Plumes",
+    "DESCRIPTION": "Gain !M! Temporary_HP. NL When drawn, increase the amount by 2 this combat. NL Exhaustive !stslib:ex!."
+  },
+  "theextravagant:Courage": {
+    "NAME": "Courage",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL While this is in your hand, all other cards in your hand are Unplayable."
+  },
+  "theextravagant:SharpTalons": {
+    "NAME": "Sharp Talons",
+    "DESCRIPTION": "When drawn, your next Attack deals !M! additional damage.[] NL Deal !D! damage."
+  },
+  "theextravagant:Brilliance": {
+    "NAME": "Shine",
+    "DESCRIPTION": "theextravagant:Delay - !M! Attacks: Gain 1 Dexterity. NL Exhaust."
+  },
+  "theextravagant:GarbageCannon": {
+    "NAME": "Garbage Cannon",
+    "DESCRIPTION": "Exhaust a card in your hand. NL theextravagant:Delay - 4 cards: Deal !D! damage."
+  },
+  "theextravagant:Foil": {
+    "NAME": "Foil",
+    "DESCRIPTION": "Whenever you play a card this turn, gain !M! Block. You can't play any Attacks this turn."
+  },
+  "theextravagant:Radiance": {
+    "NAME": "Radiance",
+    "DESCRIPTION": "Whenever you gain Strength, gain !M! Block."
+  },
+  "theextravagant:RisingPhoenix": {
+    "NAME": "Rising Phoenix",
+    "DESCRIPTION": "Grave. NL Deal !D! damage to all enemies !M! times. NL Shuffle 2 theextravagant:Sparks into your discard pile."
+  },
+  "theextravagant:CuttingEdge": {
+    "NAME": "Cutting Edge",
+    "DESCRIPTION": "When drawn, apply !M! Vulnerable to all enemies. NL Deal !D! damage."
+  },
+  "theextravagant:Aftermath": {
+    "NAME": "Aftermath",
+    "DESCRIPTION": "Unplayable. NL If this is the only card left in your hand at the end of your turn, deal !D! damage to all enemies."
+  },
+  "theextravagant:RustyBuckler": {
+    "NAME": "Rusty Buckler",
+    "DESCRIPTION": "When drawn, gain !M! Thorns. NL Gain !B! Block."
+  },
+  "theextravagant:Precaution": {
+    "NAME": "Precaution",
+    "DESCRIPTION": "When drawn, Gain !M! Block. NL Gain !B! Block."
+  },
+  "theextravagant:Outrun": {
+    "NAME": "Outrun",
+    "DESCRIPTION": "At the end of your turn gain !M! Block for each Skill in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn gain !M! Block for each Skill in your hand."
+  },
+  "theextravagant:Redemption": {
+    "NAME": "Redemption",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Whenever you are Attacked, increase this cards damage by 2 this combat."
+  },
+  "theextravagant:Overrun": {
+    "NAME": "Overrun",
+    "DESCRIPTION": "Whenever you gain Block this turn, deal !M! damage to all enemies."
+  },
+  "theextravagant:ManifestIllusion": {
+    "NAME": "Manifest Illusion",
+    "DESCRIPTION": "theextravagant:Delay 6 cards: Shuffle a copy of the sixth card played into your draw pile. NL It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "theextravagant:Delay 6 cards: Shuffle !M! copies of the sixth card played into your draw pile. NL They cost 0 until played. NL Exhaust."
+  },
+  "theextravagant:Thrill": {
+    "NAME": "Thrill",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Copy ALL Attacks in your hand. NL Discard a random card."
+  },
+  "theextravagant:Urgency": {
+    "NAME": "Urgency",
+    "DESCRIPTION": "Whenever you draw an Attack, your next Attack deals !M! additional damage.",
+    "UPGRADE_DESCRIPTION": "theextravagant:Light. NL Whenever you draw an Attack, your next Attack deals !M! additional damage."
+  },
+  "theextravagant:Overpower": {
+    "NAME": "Overpower",
+    "DESCRIPTION": "Gain 5 Strength. NL theextravagant:Delay - !M! Attacks: Lose 5 Strength. NL Exhaust."
+  },
+  "theextravagant:Impulse": {
+    "NAME": "Impulse",
+    "DESCRIPTION": "If the next card you play is an Attack, add an theextravagant:Acceleration to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If the next card you play is an Attack, add an upgraded theextravagant:Acceleration to your hand. NL Exhaust."
+  },
+  "theextravagant:QuickAttack": {
+    "NAME": "Quick Attack",
+    "DESCRIPTION": "theextravagant:Light. NL Deal !D! damage."
+  },
+  "theextravagant:StepBack": {
+    "NAME": "Step Back",
+    "DESCRIPTION": "When drawn, put !M! card from your discard pile on top of your draw pile. NL Gain !B! Block."
+  },
+  "theextravagant:DualMirrorCut": {
+    "NAME": "Dual Mirror Cut",
+    "DESCRIPTION": "Discard a card. If you discard an Attack, deal its damage to a random enemy !M! times. NL Exhaust."
+  },
+  "theextravagant:Vintage": {
+    "NAME": "Vintage",
+    "DESCRIPTION": "The first card you play each turn is not discarded."
+  },
+  "theextravagant:Swirl": {
+    "NAME": "Swirl",
+    "DESCRIPTION": "theextravagant:Enchant a Skill in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL theextravagant:Enchant a Skill in your hand. NL Exhaust."
+  },
+  "theextravagant:Antiquity": {
+    "NAME": "Antiquity",
+    "DESCRIPTION": "At the start of your turn draw 5 cards. Whenever you play a card, discard a random card."
+  },
+  "theextravagant:Spark": {
+    "NAME": "Spark",
+    "DESCRIPTION": "Ethereal. NL Unplayable. NL When drawn, theextravagant:Enchant the next Attack you draw this combat.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL When drawn, theextravagant:Enchant the next Attack you draw this combat."
+  },
+  "theextravagant:Twitch": {
+    "NAME": "Twitch",
+    "DESCRIPTION": "Unplayable. NL theextravagant:Heavy. NL When drawn, NL gain [E].",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When drawn, NL gain [E]."
+  },
+  "theextravagant:Drift": {
+    "NAME": "Drift",
+    "DESCRIPTION": "Deal !D! damage. NL theextravagant:Toss !M! cards."
+  },
+  "theextravagant:AuroraForm": {
+    "NAME": "Aurora Form",
+    "DESCRIPTION": "Ethereal. NL theextravagant:Enchanted cards are played !M! additional time.",
+    "UPGRADE_DESCRIPTION": "theextravagant:Enchanted cards are played !M! additional time."
+  },
+  "theextravagant:OminousGlare": {
+    "NAME": "Ominous Glare",
+    "DESCRIPTION": "When drawn, ALL enemies lose !M! Hp. NL Gain !B! Block.[]"
+  },
+  "theextravagant:SnakeEyes": {
+    "NAME": "Snek Eyes",
+    "DESCRIPTION": "When drawn, apply !M! Weak to all enemies. Enemy loses 3 Strength this turn."
+  },
+  "theextravagant:Riot": {
+    "NAME": "Riot",
+    "DESCRIPTION": "theextravagant:Heavy. NL Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "theextravagant:Firework": {
+    "NAME": "Firework",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Shuffle a theextravagant:Spark into your discard pile."
+  },
+  "theextravagant:Tension": {
+    "NAME": "Tension",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you draw a Skill, the enemy takes !M! damage. NL Exhaust."
+  },
+  "theextravagant:HeavyBlows": {
+    "NAME": "Heavy Blows",
+    "DESCRIPTION": "theextravagant:Heavy. NL Deal !D! damage !M! times."
+  },
+  "theextravagant:Repell": {
+    "NAME": "Repell",
+    "DESCRIPTION": "If the next card you play is an Attack, gain !B! Block."
+  },
+  "theextravagant:LifeCharm": {
+    "NAME": "Life Charm",
+    "DESCRIPTION": "Prevent all debuffs until you play !M! cards. NL Exhaust."
+  },
+  "theextravagant:Dazzle": {
+    "NAME": "Dazzle",
+    "DESCRIPTION": "Apply !M! Weak. NL theextravagant:Delay - 3 cards: Shuffle a Dazed into your draw pile."
+  },
+  "theextravagant:Ravage": {
+    "NAME": "Ravage",
+    "DESCRIPTION": "When Drawn, increase this cards damage by !M! this combat. NL Deal !D! damage to ALL enemies twice."
+  },
+  "theextravagant:Castle": {
+    "NAME": "Castle",
+    "DESCRIPTION": "Deal !D! damage. NL Put your hand on top of your draw pile, then draw !M! cards. "
+  },
+  "theextravagant:Nihil": {
+    "NAME": "Nihil",
+    "DESCRIPTION": "Prevent the next time you would lose HP and add a Void on top of your draw pile instead. NL Exhaustive !stslib:ex!."
+  },
+  "theextravagant:Supersonic": {
+    "NAME": "Supersonic",
+    "DESCRIPTION": "Add X theextravagant:Accelerations to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X Upgraded theextravagant:Accelerations to your hand. NL Exhaust."
+  },
+  "theextravagant:Shove": {
+    "NAME": "Shove",
+    "DESCRIPTION": "Deal !D! damage twice. NL Shuffle an theextravagant:Acceleration into your draw pile."
+  },
+  "theextravagant:ShootingStar": {
+    "NAME": "Shooting Stars",
+    "DESCRIPTION": "Ethereal. NL Shuffle !M! theextravagant:Sparks into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Shuffle !M! theextravagant:Sparks into your draw pile."
+  },
+  "theextravagant:Shake": {
+    "NAME": "Shake",
+    "DESCRIPTION": "Deal !D! damage twice. NL Apply !M! Weak."
+  },
+  "theextravagant:SpiritBolt": {
+    "NAME": "Spirit Bolt",
+    "DESCRIPTION": "Deal !D! damage. NL theextravagant:Enchant a 0-cost card in your hand."
+  },
+  "theextravagant:Shatter": {
+    "NAME": "Shatter",
+    "DESCRIPTION": "Deal !D! damage for each card in your hand that costs 0."
+  },
+  "theextravagant:PerfectTheBasics": {
+    "NAME": "Perfect the Basics",
+    "DESCRIPTION": "Deal !D! damage. NL theextravagant:Enchant a theextravagant:Starter card in your hand."
+  },
+  "theextravagant:Razor": {
+    "NAME": "Memento Mori",
+    "DESCRIPTION": "Deal !D! damage. NL At the end of each turn, deal !M! damage to all enemies."
+  },
+  "theextravagant:Stella": {
+    "NAME": "Stella",
+    "DESCRIPTION": "Deal !D! damage. NL theextravagant:Enchant this card and reduce its cost to 1 this combat."
+  },
+  "theextravagant:Masquerade": {
+    "NAME": "Masquerade",
+    "DESCRIPTION": "Scry !M!. NL theextravagant:Toss !M! cards and theextravagant:Enchant each Skill theextravagant:Tossed."
+  },
+  "theextravagant:Comeback": {
+    "NAME": "Comeback",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL When drawn, Fetch a Skill from your discard pile.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When drawn, Fetch a Skill from your discard pile."
+  },
+  "theextravagant:ExhaustingCard": {
+    "NAME": "",
+    "DESCRIPTION": " NL Exhaust."
+  },
+  "theextravagant:Defy": {
+    "NAME": "Defy",
+    "DESCRIPTION": "Retain. NL When drawn, add a copy of this card to your hand. NL Gain !B! Block. NL Exhaust."
+  },
+  "theextravagant:ArtisticDisplay": {
+    "NAME": "Artistic Display",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn draw 1 additional card.",
+    "UPGRADE_DESCRIPTION": "theextravagant:Light. NL Gain !B! Block. NL Next turn draw 1 additional card."
+  },
+  "theextravagant:ShieldCharm": {
+    "NAME": "Shielding Charm",
+    "DESCRIPTION": "Gain !M! Temporary_HP X times. NL Exhaust."
+  },
+  "theextravagant:Erase": {
+    "NAME": "Erase",
+    "DESCRIPTION": "Deal !D! damage. Discard your hand. NL Draw !M! cards."
+  }
+}
