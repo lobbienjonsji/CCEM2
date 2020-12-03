@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CCEM2" />
+        <module name="TheExtravagant" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="CCEM2" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
