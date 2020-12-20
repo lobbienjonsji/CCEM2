@@ -1,0 +1,313 @@
+{
+  "theextravagant:TriumphPower": {
+    "NAME": "Triumph",
+    "DESCRIPTIONS": [
+      "If you play ",
+      " attacks in a row, gain ",
+      " Strength.",
+      " attack, gain "
+    ]
+  },
+  "theextravagant:AmbushPower": {
+    "NAME": "Ambush",
+    "DESCRIPTIONS": [
+      "The next ",
+      "time you deal attack damage, deal double damage.",
+      " times you deal attack damage, deal double damage."
+    ]
+  },
+  "theextravagant:PrepareAmbushPower": {
+    "NAME": "Prepare Ambush",
+    "DESCRIPTIONS": [
+      "If the last card you play this turn is a skill, the next ",
+      "card you play deals double damage.",
+      " cards you play deal double damage."
+    ]
+  },
+  "theextravagant:SnakeOilPower": {
+    "NAME": "Snake Oil",
+    "DESCRIPTIONS": [
+      "After you play ",
+      " slimed, heal ",
+      " HP."
+    ]
+  },
+  "theextravagant:DamnationPower": {
+    "NAME": "Damnation",
+    "DESCRIPTIONS": [
+      "If you play ",
+      " attack, deal ",
+      " attacks, deal ",
+      " damage to all enemies."
+    ]
+  },
+  "theextravagant:TrickeryPower": {
+    "NAME": "Trickery",
+    "DESCRIPTIONS": [
+      "At the start of your turn draw a card, then shuffle it back into your draw pile.",
+      "At the start of your turn draw ",
+      " cards, then put them at the bottom of your draw pile."
+    ]
+  },
+  "theextravagant:RetreatPower": {
+    "NAME": "Retreat",
+    "DESCRIPTIONS": [
+      "At the End of this turn, put all cards from your hand into your draw pile and gain ",
+      " Block for each."
+    ]
+  },
+  "theextravagant:MagicPower": {
+    "NAME": "Magic",
+    "DESCRIPTIONS": [
+      "At the end of your turn, Enchant all powers in your hand."
+    ]
+  },
+  "theextravagant:FlashbackPower": {
+    "NAME": "Flashback",
+    "DESCRIPTIONS": [
+      "Heal ",
+      " HP at the start of your turn until you play ",
+      " cards."
+    ]
+  },
+  "theextravagant:ZeroHeroPower": {
+    "NAME": "Zero Hero",
+    "DESCRIPTIONS": [
+      "After you play ",
+      " cards that cost 0, gain ",
+      " Strength"
+    ]
+  },
+  "theextravagant:RetainTwoCostsPower": {
+    "NAME": "Retain Two Costs",
+    "DESCRIPTIONS": [
+      "Retain all 2 cost cards this turn. NL They cost 0 next turn."
+    ]
+  },
+  "theextravagant:GlyphOfSightPower": {
+    "NAME": "Glyph of light",
+    "DESCRIPTIONS": [
+      "At the start of each turn, shuffle ",
+      " spark into your draw pile.",
+      " sparks into your draw pile."
+    ]
+  },
+  "theextravagant:GlyphOfChoicePower": {
+    "NAME": "Glyph of Choice",
+    "DESCRIPTIONS": [
+      "At the start of each turn draw ",
+      " card and put 1 card from your hand on top of your draw pile.",
+      " cards and put that many cards from your hand on top of your draw pile."
+    ]
+  },
+  "theextravagant:GlyphOfPowerPower": {
+    "NAME": "Glyph of Power",
+    "DESCRIPTIONS": [
+      "At the start of each turn lose Energy and add ",
+      " Acceleration to your hand.",
+      " Accelerations to your hand."
+    ]
+  },
+  "theextravagant:GlyphOfTimePower": {
+    "NAME": "Glyph of Time",
+    "DESCRIPTIONS": [
+      "Whenever you play ",
+      " cards, gain ",
+      " Strength."
+    ]
+  },
+  "theextravagant:OneTurnRetainPower": {
+    "NAME": "Retain",
+    "DESCRIPTIONS": [
+      "At the end of this turn retain ",
+      " card.",
+      " cards."
+    ]
+  },
+  "theextravagant:FoilPower": {
+    "NAME": "Foil",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, gain ",
+      " Temporary HP."
+    ]
+  },
+  "theextravagant:RadiancePower": {
+    "NAME": "RadiancePower",
+    "DESCRIPTIONS": [
+      "Whenever you gain Strength, gain ",
+      " Block."
+    ]
+  },
+  "theextravagant:JumpCutPower": {
+    "NAME": "Jump Cut",
+    "DESCRIPTIONS": [
+      "Whenever you gain a buff this turn, trigger the effects it would have at the start of your turn."
+    ]
+  },
+  "theextravagant:VintagePower": {
+    "NAME": "Vintage",
+    "DESCRIPTIONS": [
+      "Each turn put ",
+      " card you play back into your hand.",
+      " cards you play back into your hand."
+    ]
+  },
+  "theextravagant:DrawReductionOncePower": {
+    "NAME": "Draw Reduction",
+    "DESCRIPTIONS": [
+      "Draw 1 less card next turn.",
+      "Draw .",
+      " less cards next turn."
+    ]
+  },
+  "theextravagant:AntiquityPower": {
+    "NAME": "Antiquity",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, discard a random card."
+    ]
+  },
+  "theextravagant:AuroraFormPower": {
+    "NAME": "Aurora Form",
+    "DESCRIPTIONS": [
+      "Enchanted cards are played ",
+      " additional time.",
+      " additional times."
+    ]
+  },
+  "theextravagant:RepellPower": {
+    "NAME": "Repell",
+    "DESCRIPTIONS": [
+      "If you play an attack, gain ",
+      " Block."
+    ]
+  },
+  "theextravagant:ImpulsePower": {
+    "NAME": "Impulse",
+    "DESCRIPTIONS": [
+      "If the next card you play costs is an attack, add ",
+      " Acceleration to your hand.",
+      " Accelerations to your hand."
+    ]
+  },
+  "theextravagant:NihilPower": {
+    "NAME": "Nihil",
+    "DESCRIPTIONS": [
+      "Prevent the next time you would lose HP and add a void on top of your draw pile instead.",
+      "Prevent the next ",
+      " times you would lose HP and add a void on top of your draw pile instead."
+    ]
+  },
+  "theextravagant:LifeCharmPower": {
+    "NAME": "Life Charm",
+    "DESCRIPTIONS": [
+      "You can't gain any debuffs."
+    ]
+  },
+  "theextravagant:PersistencePower": {
+    "NAME": "Persistence",
+    "DESCRIPTIONS": [
+      "After you play  ",
+      " attacks, gain ",
+      " Energy.",
+      " attack, gain "
+    ]
+  },
+  "theextravagant:ShinePower": {
+    "NAME": "Shine",
+    "DESCRIPTIONS": [
+      "After you play  ",
+      " attacks, gain ",
+      " Dexterity.",
+      " attack, gain "
+    ]
+  },
+  "theextravagant:DazzlePower": {
+    "NAME": "Dazzle",
+    "DESCRIPTIONS": [
+      "After you play  ",
+      " cards, shuffle a",
+      " Dazed into your draw pile.",
+      " card, shuffle a "
+    ]
+  },
+  "theextravagant:GarbageCannonPower": {
+    "NAME": "GarbageCannon",
+    "DESCRIPTIONS": [
+      "After you play  ",
+      " cards, deal ",
+      " card, deal ",
+      "damage"
+    ]
+  },
+  "theextravagant:illusionPower": {
+    "NAME": "Illusion",
+    "DESCRIPTIONS": [
+      "After you play  ",
+      " cards, shuffle a 0-cost copy of the last card played into your draw pile.",
+      " cards, shuffle 2 0-cost copies of the last card played into your draw pile."
+    ]
+  },
+  "theextravagant:OutrunPower": {
+    "NAME": "Outrun",
+    "DESCRIPTIONS": [
+      "At the end of your turn gain ",
+      " Block for each skill in your hand."
+    ]
+  },
+  "theextravagant:OverPowerPower": {
+    "NAME": "Strength Down",
+    "DESCRIPTIONS": [
+      "After you play ",
+      " cards, lose 5 Strength."
+    ]
+  },
+  "theextravagant:UrgencyPower": {
+    "NAME": "Urgency",
+    "DESCRIPTIONS": [
+      "Whenever you draw an attack, your next attack deals ",
+      " additional damage."
+    ]
+  },
+  "theextravagant:RiskPower": {
+    "NAME": "Risk",
+    "DESCRIPTIONS": [
+      "After you play ",
+      " cards, discard your hand."
+    ]
+  },
+  "theextravagant:DodgePower": {
+    "NAME": "Dodge",
+    "DESCRIPTIONS": [
+      "After you play ",
+      " skills, gain ",
+      " Block."
+    ]
+  },
+  "theextravagant:TensionPower": {
+    "NAME": "Tension",
+    "DESCRIPTIONS": [
+      "Whenever yo draw a skill, this enemy takes ",
+      " damage."
+    ]
+  },
+  "theextravagant:RazorPower": {
+    "NAME": "Razor",
+    "DESCRIPTIONS": [
+      "At the end of your turn deal ",
+      " damage to ALL enemies."
+    ]
+  },
+  "theextravagant:OverrunPower": {
+    "NAME": "Overrun",
+    "DESCRIPTIONS": [
+      "Whenever you gain Block this turn, deal ",
+      " damage to ALL enemies."
+    ]
+  },
+  "theextravagant:SparkPower": {
+    "NAME": "Spark",
+    "DESCRIPTIONS": [
+      "Enchant the next attack you draw."
+    ]
+  }
+}

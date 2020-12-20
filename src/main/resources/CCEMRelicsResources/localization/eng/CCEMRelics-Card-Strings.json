@@ -1,0 +1,24 @@
+{
+  "CCEMRelics:ExampleCard": {
+    "NAME": "Example Card",
+    "DESCRIPTION": "Example.",
+    "UPGRADE_DESCRIPTION": "Example but upgraded."
+  },
+  "spectralcard": {
+    "NAME": "",
+    "DESCRIPTION": " NL ccemrelics:Spectral."
+  },
+  "purgecard": {
+    "NAME": "",
+    "DESCRIPTION": " NL Purge."
+  },
+  "etherealcard": {
+    "NAME": "",
+    "DESCRIPTION": " NL Ethereal."
+  },
+  "chaincard":
+  {
+    "NAME": "",
+    "DESCRIPTION": " NL ccemrelics:Chain."
+  }
+}
