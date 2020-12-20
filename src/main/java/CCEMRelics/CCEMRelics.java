@@ -14,7 +14,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,7 +32,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-@SpireInitializer
+//@SpireInitializer
 public class CCEMRelics implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
@@ -148,12 +147,12 @@ public class CCEMRelics implements
         }
     }
 
-    @SuppressWarnings("unused")
+    /*@SuppressWarnings("unused")
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
         CCEMRelics CCEMRelics = new CCEMRelics();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
-    }
+    }*/
 
     public static String makeID(String idText) {
         return getModID() + ":" + idText;

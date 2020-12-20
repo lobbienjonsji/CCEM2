@@ -1,7 +1,6 @@
 package theextravagant;
 
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomSavableRaw;
 import basemod.interfaces.*;
@@ -11,17 +10,13 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -45,10 +40,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-import static ACCEMCore.ACCEMCore.CCEMDefaultSettings;
-import static ACCEMCore.ACCEMCore.ENABLE_EXTRAVAGANT;
-
-@SpireInitializer
+//@SpireInitializer
 public class theextravagant implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
@@ -109,33 +101,25 @@ public class theextravagant implements
     private static String modID;
 
     public theextravagant() {
-        try {
-            SpireConfig config = new SpireConfig("CCEM", "CCEM", CCEMDefaultSettings);
-            logger.info("Subscribe to BaseMod hooks");
+        logger.info("Subscribe to BaseMod hooks");
 
-            if (config.getBool(ENABLE_EXTRAVAGANT)) {
-                BaseMod.subscribe(this);
-            }
+        //if (isExtravagantEnabled) {
+        BaseMod.subscribe(this);
+        //}
 
+        setModID("theextravagant");
 
-            setModID("theextravagant");
+        logger.info("Done subscribing");
 
+        logger.info("Creating the color " + TheExtravagant.Enums.EV_BLUE.toString());
 
-            logger.info("Done subscribing");
+        BaseMod.addColor(TheExtravagant.Enums.EV_BLUE, EVBLUE, EVBLUE, EVBLUE,
+                EVBLUE, EVBLUE, EVBLUE, EVBLUE,
+                ATTACK_EV_BLUE, SKILL_EV_BLUE, POWER_EV_BLUE, ENERGY_ORB_EV_BLUE,
+                ATTACK_EV_BLUE_PORTRAIT, SKILL_EV_BLUE_PORTRAIT, POWER_EV_BLUE_PORTRAIT,
+                ENERGY_ORB_EV_BLUE_PORTRAIT, CARD_ENERGY_ORB);
 
-            logger.info("Creating the color " + TheExtravagant.Enums.EV_BLUE.toString());
-
-            BaseMod.addColor(TheExtravagant.Enums.EV_BLUE, EVBLUE, EVBLUE, EVBLUE,
-                    EVBLUE, EVBLUE, EVBLUE, EVBLUE,
-                    ATTACK_EV_BLUE, SKILL_EV_BLUE, POWER_EV_BLUE, ENERGY_ORB_EV_BLUE,
-                    ATTACK_EV_BLUE_PORTRAIT, SKILL_EV_BLUE_PORTRAIT, POWER_EV_BLUE_PORTRAIT,
-                    ENERGY_ORB_EV_BLUE_PORTRAIT, CARD_ENERGY_ORB);
-
-            logger.info("Done creating the color");
-            config.load();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        logger.info("Done creating the color");
 
     }
 
@@ -200,12 +184,12 @@ public class theextravagant implements
         }
     }
 
-    @SuppressWarnings("unused")
+    /*@SuppressWarnings("unused")
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
         theextravagant TheExtravagant = new theextravagant();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
-    }
+    }*/
 
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
@@ -240,7 +224,7 @@ public class theextravagant implements
         logger.info("Loading badge image and mod options");
         Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
         ModPanel settingsPanel = new ModPanel();
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
+        /*ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 enablePlaceholder,
                 settingsPanel,
@@ -259,13 +243,14 @@ public class theextravagant implements
                     }
                 });
 
-        settingsPanel.addUIElement(enableNormalsButton);
+        settingsPanel.addUIElement(enableNormalsButton);*/
+
         SecondEnergyOrb = new SecondEnergyOrb();
         BaseMod.addSaveField("MaxExtravagance", new CustomSavableRaw() {
             @Override
             public JsonElement onSaveRaw() {
                 Gson coolG = new Gson();
-                logger.info("Saved Shit");
+                logger.info("Extravagant Saved Shit");
                 return coolG.toJsonTree(SecondEnergyOrb.maxEnergy);
             }
 
@@ -274,7 +259,7 @@ public class theextravagant implements
                 if (jsonElement != null) {
                     Gson coolG = new Gson();
                     SecondEnergyOrb.maxEnergy = (coolG.fromJson(jsonElement, Integer.class));
-                    logger.info("Loaded Shit");
+                    logger.info("Extravagant Loaded Shit");
                 }
             }
         });

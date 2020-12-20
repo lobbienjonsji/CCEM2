@@ -11,7 +11,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -29,7 +28,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-@SpireInitializer
+//@SpireInitializer
 public class SynthesistMain implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
@@ -174,7 +173,7 @@ public class SynthesistMain implements
         }
     }
     
-    @SuppressWarnings("unused")
+    /*@SuppressWarnings("unused")
     public static void initialize() {
         logger.info("Initializing The Synthesist. Feed Cookies to continue. Left Click was here");
         System.out.println(
@@ -194,7 +193,7 @@ public class SynthesistMain implements
                         "        \\_____________/");
         SynthesistMain synthesistMod = new SynthesistMain();
         logger.info("The Synthesist Initialized - Cookies have been fed");
-    }
+    }*/
     
     @Override
     public void receiveEditCharacters() {

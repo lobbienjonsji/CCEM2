@@ -4,9 +4,9 @@
 
     <groupId>TheExtravagant</groupId> <!--change the internal id? idk.-->
     <artifactId>TheExtravagant</artifactId>
-    <name>The Extravagant</name>
+    <name>CCEM</name>
     <version>0.0.1</version>
-    <description>A default base to start your own mod from.</description>
+    <description>Community Collab Expansion Mod. Sponsored by the Church of Raptor Jesus.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -18,6 +18,9 @@
         <ActLikeIt.version>1.2.0</ActLikeIt.version>
         <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
         <Steam.path>C:\Program Files (x86)\Steam\steamapps</Steam.path>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencies>
@@ -56,7 +59,7 @@
         <dependency>
             <groupId>actlikeit</groupId>
             <artifactId>actlikeit</artifactId>
-            <version>${ActLikeIt.version.version}</version>
+            <version>${ActLikeIt.version}</version>
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1934902042/actlikeit.jar</systemPath>
             <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->

@@ -29,7 +29,7 @@ public class TheSynthesist extends CustomPlayer {
     public static class Enums {
         @SpireEnum
         public static PlayerClass THE_SYNTHESIST;
-        @SpireEnum(name = "SYNTHESIS_COLOR")
+        @SpireEnum(name = "SYNTHESIST_COLOR")
         public static AbstractCard.CardColor SYNTHESIST_COLOR;
         @SpireEnum(name = "SYNTHESIST_COLOR")
         @SuppressWarnings("unused")
@@ -37,9 +37,9 @@ public class TheSynthesist extends CustomPlayer {
     }
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 95;
-    public static final int MAX_HP = 95;
-    public static final int STARTING_GOLD = 121;
+    public static final int STARTING_HP = 75;
+    public static final int MAX_HP = 75;
+    public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
 
