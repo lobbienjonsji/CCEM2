@@ -66,7 +66,8 @@ public class TheSynthesist extends CustomPlayer {
         super(name, setClass, orbTextures,
                 "SynthesistResources/images/char/synthesistChar/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "SynthesistResources/images/char/synthesistChar/Spriter/SynthesistAnimation.scml"));
+                        "SynthesistResources/images/char/synthesistChar/Spriter/theDefaultAnimation.scml"));
+        //TODO: swap this out for the proper animation once done
         
         
         initializeClass(null,
