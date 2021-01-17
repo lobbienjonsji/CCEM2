@@ -7,5 +7,98 @@
       " cards.",
       "NL #yEvoke: Deal #b damage to all enemies."
     ]
+  },
+  "theSynthesist:NOTE": {
+    "NAME": "THESE ARE NOT ORBS",
+    "DESCRIPTION": [
+      "I'm simply piggybacking off of the string storage system for orbs",
+      "These are not actually orbs."
+    ]
+  },
+  "theSynthesist:Flameroot": {
+    "NAME": "Flameroot",
+    "DESCRIPTION": [
+      "Deal #b",
+      " Damage to a random enemy."
+    ]
+  },
+  "theSynthesist:CrystalShard": {
+    "NAME": "Crystal Shard",
+    "DESCRIPTION": [
+      "Gain #b",
+      " #yBlock."
+    ]
+  },
+  "theSynthesist:Toxflower": {
+    "NAME": "Toxflower",
+    "DESCRIPTION": [
+      "Apply #b",
+      " #yPoison to a random enemy."
+    ]
+  },
+  "theSynthesist:DwarvenAle": {
+    "NAME": "Dwarven Ale",
+    "DESCRIPTION": [
+      "Upgrade a random card in your draw pile.",
+      "Upgrade #b",
+      " random cards in your draw pile."
+    ]
+  },
+  "theSynthesist:BerserkersBroth": {
+    "NAME": "Berserker's Broth",
+    "DESCRIPTION": [
+      "Gain #b",
+      " #yStrength."
+    ]
+  },
+  "theSynthesist:DefendersDilution": {
+    "NAME": "Defender's Dilution",
+    "DESCRIPTION": [
+      "Gain #b",
+      " #yDexterity."
+    ]
+  },
+  "theSynthesist:LiquidGreed": {
+    "NAME": "Liquid Greed",
+    "DESCRIPTION": [
+      "Gain #b",
+      " #yGold."
+    ]
+  },
+  "theSynthesist:IgnitionDust": {
+    "NAME": "Ignition Dust",
+    "DESCRIPTION": [
+      "Deal #b",
+      " Damage to ALL enemies."
+    ]
+  },
+  "theSynthesist:DewOfLife": {
+    "NAME": "Dew Of Life",
+    "DESCRIPTION": [
+      "Gain #b",
+      " #yInvigoration."
+    ]
+  },
+  "theSynthesist:AncientRunedust": {
+    "NAME": "Ancient Runedust",
+    "DESCRIPTION": [
+      "Gain #b",
+      " #yArtifact."
+    ]
+  },
+  "theSynthesist:CondensedMana": {
+    "NAME": "Condensed Mana",
+    "DESCRIPTION": [
+      "Gain #b",
+      " additional [E] next turn."
+    ]
+  },
+  "theSynthesist:Mercurium": {
+    "NAME": "Mercurium",
+    "DESCRIPTION": [
+      "The next non-power card is played #b",
+      " more time.",
+      " more times."
+    ]
   }
 }

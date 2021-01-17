@@ -1,4 +1,9 @@
 {
+  "theSynthesist:PurityNames": {
+    "NAME": "PurityNames",
+    "DESCRIPTION": "used to hold strings for purity since hardcoded strings are bad",
+    "EXTENDED_DESCRIPTION": ["Diluted", "Pure", "Concentrated"]
+  },
   "theSynthesist:DefaultCommonAttack": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff22ff]works.[]"
