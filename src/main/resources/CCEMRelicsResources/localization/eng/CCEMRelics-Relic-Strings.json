@@ -265,5 +265,100 @@
     "DESCRIPTIONS": [
       "At the end of your first turn, convert all of your #yBlock into temporary HP."
     ]
+  },
+  "CCEMRelics:SelfSharpeningBlade": {
+    "NAME": "Self-Sharpening Blade",
+    "FLAVOR": "Now only $9.99",
+    "DESCRIPTIONS": [
+      "Colorless Cards deal #b3 extra damage."
+    ]
+  },
+  "CCEMRelics:SoftDrink": {
+    "NAME": "Soft Drink",
+    "FLAVOR": "Sponsored by the holiday red fat man",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b1 #yEnergized."
+    ]
+  },
+  "CCEMRelics:TeddyBear": {
+    "NAME": "Teddy Bear",
+    "FLAVOR": "Drenched in children's tears.",
+    "DESCRIPTIONS": [
+      "Whenever you enter a rest site, start the next combat with #b2 #yArtifact."
+    ]
+  },
+  "CCEMRelics:PocketTank": {
+    "NAME": "Pocket Tank",
+    "FLAVOR": "Yes, we did bring it to a gun fight.",
+    "DESCRIPTIONS": [
+      "Whenever you end your turn with #b30 or more #yBlock, deal #b12 damage to the enemy with the most HP."
+    ]
+  },
+  "CCEMRelics:LatexGloves": {
+    "NAME": "Latex Gloves",
+    "FLAVOR": "For touching the unclean.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw #b1 additional card. Whenever you draw the last card in your draw pile, draw #b1 additional card at the start of your next turn."
+    ]
+  },
+  "CCEMRelics:FakeTeeth": {
+    "NAME": "Fake Teeth",
+    "FLAVOR": "Smile.",
+    "DESCRIPTIONS": [
+      "Whenever you play a power, apply #b1 #yWeak to ALL enemies."
+    ]
+  },
+  "CCEMRelics:HeliumBalloon": {
+    "NAME": "Helium Balloon",
+    "FLAVOR": "We all float down here.",
+    "DESCRIPTIONS": [
+      "The draw pile is sorted by cost. Lowest at the top."
+    ]
+  },
+  "CCEMRelics:CanOfSoda": {
+    "NAME": "Can of Soda",
+    "FLAVOR": "Trademark Sneca-Cola.",
+    "DESCRIPTIONS": [
+      "Upon pickup, Gain #b1 Max HP for each Common card and Starter card in your deck."
+    ]
+  },
+  "CCEMRelics:HedgeMaize": {
+    "NAME": "Hedge Maize",
+    "FLAVOR": "It's a bit corny.",
+    "DESCRIPTIONS": [
+      "Whenever you enter a #y? room, heal 5 HP."
+    ]
+  },
+  "CCEMRelics:FiftyFTOfRope": {
+    "NAME": "50ft of Rope",
+    "FLAVOR": "Well Hubris got the pole.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a #ySkill. ALL copies of that #ySkill gain #yccemrelics:Chain",
+      "Select a Skill to chain together with ",
+      ".",
+      "ALL copies of ",
+      " currently #yccemrelics:Chain together."
+    ]
+  },
+  "CCEMRelics:BundleOfChain": {
+    "NAME": "Bundle of Chain",
+    "FLAVOR": "Also found in gold.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose an #yAttack. ALL copies of that #yAttack gain #yccemrelics:Chain",
+      "Select an Attack to chain together with ",
+      ".",
+      "ALL copies of ",
+      " currently #yccemrelics:Chain together."
+    ]
+  },
+  "CCEMRelics:MissingSock": {
+    "NAME": "Missing Sock",
+    "FLAVOR": "Huh, I found it.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card. Start each combat with this card at the bottom of your draw pile.",
+      "Select a card to stuff into the ",
+      ".",
+      " will start at the bottom of your draw pile in every combat."
+    ]
   }
 }

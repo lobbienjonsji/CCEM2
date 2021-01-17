@@ -213,6 +213,18 @@ public class CCEMRelics implements
         BaseMod.addRelic(new OldTooth(), RelicType.SHARED);
         //BaseMod.addRelic(new WhiteNoiseMachine(), RelicType.SHARED);
         BaseMod.addRelic(new OrganicArmor(), RelicType.SHARED);
+        //LC Added these relics, go yell at him if something went wrong
+        BaseMod.addRelic(new SelfSharpeningBlade(), RelicType.SHARED);
+        BaseMod.addRelic(new SoftDrink(), RelicType.SHARED);
+        BaseMod.addRelic(new TeddyBear(), RelicType.SHARED);
+        BaseMod.addRelic(new PocketTank(), RelicType.SHARED);
+        BaseMod.addRelic(new LatexGloves(), RelicType.SHARED);
+        BaseMod.addRelic(new FakeTeeth(), RelicType.SHARED);
+        BaseMod.addRelic(new HeliumBalloon(), RelicType.SHARED);
+        BaseMod.addRelic(new CanOfSoda(), RelicType.SHARED);
+        BaseMod.addRelic(new FiftyFTOfRope(), RelicType.SHARED);
+        BaseMod.addRelic(new BundleOfChain(), RelicType.SHARED);
+        BaseMod.addRelic(new MissingSock(), RelicType.SHARED);
         logger.info("Done adding relics!");
     }
 
