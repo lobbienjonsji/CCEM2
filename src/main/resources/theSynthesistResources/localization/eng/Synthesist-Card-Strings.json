@@ -1,0 +1,23 @@
+{
+  "theSynthesist:PurityNames": {
+    "NAME": "PurityNames",
+    "DESCRIPTION": "used to hold strings for purity since hardcoded strings are bad",
+    "EXTENDED_DESCRIPTION": ["Diluted", "Pure", "Concentrated"]
+  },
+  "theSynthesist:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff22ff]works.[]"
+  },
+  "theSynthesist:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !theSynthesist:ENERGY_DAMAGE! damage total.)"
+  },
+  "theSynthesist:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !theSynthesist:SecondMagic! poison to an enemy."
+  },
+  "theSynthesist:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  }
+}

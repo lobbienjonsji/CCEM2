@@ -1,0 +1,118 @@
+{
+  "theextravagant:PlaceholderRelic": {
+    "NAME": "Placeholder Energy Relic",
+    "FLAVOR": "The snake is a friend.",
+    "DESCRIPTIONS": [
+      "Gain #b1 [E] ."
+    ]
+  },
+  "theextravagant:PlaceholderRelic2": {
+    "NAME": "Placeholder Relic 2",
+    "FLAVOR": "You feel stronger.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yStrength."
+    ]
+  },
+  "theextravagant:DefaultClickableRelic": {
+    "NAME": "Right-Clicky Relic",
+    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
+      "YOU ARE MINE!"
+    ]
+  },
+  "theextravagant:BottledPlaceholderRelic": {
+    "NAME": "Bottled Placeholder",
+    "FLAVOR": "What is this?",
+    "DESCRIPTIONS": [
+      "Choose a card. Whenever you take play any card, draw the chosen card.",
+      "Whenever you play a card, draw ",
+      ".",
+      "Select a card to bottle for "
+    ]
+  },
+  "theextravagant:TranslucentFeather": {
+    "NAME": "Translucent Feather",
+    "FLAVOR": "Like it's just an illusion.",
+    "DESCRIPTIONS": [
+      "Draw #b2 additional cards next turn whenever you shuffle discard pile into your draw pile."
+    ]
+  },
+  "theextravagant:TranscendedFeather": {
+    "NAME": "Transcended Feather",
+    "FLAVOR": "Certainly not an illusion.",
+    "DESCRIPTIONS": [
+      "Replaces Translucent Feather. Whenever you shuffle your discard pile into your draw pile, draw #b1 additional card each turn. You can hold #b2 additional cards in your hand"
+    ]
+  },
+  "theextravagant:RedPhonoblaster": {
+    "NAME": "Red Phonoblaster",
+    "FLAVOR": "Badabidibabam, Dadadidudam.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yStrength, gain #b1 additional #yStrength and lose #b1 Strength at the end of your turn."
+    ]
+  },
+  "theextravagant:Sorbet": {
+    "NAME": "Sorbet",
+    "FLAVOR": "Like Ice cream, but made for fancy people.",
+    "DESCRIPTIONS": [
+      "You are now immune to the downside of #yHeavy cards."
+    ]
+  },
+  "theextravagant:PocketDynamo": {
+    "NAME": "Pocket Dynamo",
+    "FLAVOR": "If you spin it enough, a small light flickers.",
+    "DESCRIPTIONS": [
+      "If your hand is empty at the end of your turn, add #b1 #ytheextravagant:Accumulation to your hand."
+    ]
+  },
+  "theextravagant:MoltenLipstick": {
+    "NAME": "Molten Lipstick",
+    "FLAVOR": "Kissing not recommended.",
+    "DESCRIPTIONS": [
+      "At the start of combat shuffle #b2 #yBurns into your draw pile. Whenever you draw a #yStatus or #yCurse card deal #b5 damage to all enemies."
+    ]
+  },
+  "theextravagant:TopHat": {
+    "NAME": "Top Hat",
+    "FLAVOR": "Home to all the magic.",
+    "DESCRIPTIONS": [
+      "Whenever you play #b3 Attacks in one turn, #ytheextravagant:Enchant a random Skill in your hand."
+    ]
+  },
+  "theextravagant:CuffLinks": {
+    "NAME": "Cufflinks",
+    "FLAVOR": "A Pair of metal objects that once had a proper use, but now they are just weird.",
+    "DESCRIPTIONS": [
+      "At the start of combat play #b1 random Power from your draw pile."
+    ]
+  },
+  "theextravagant:GlitterTub": {
+    "NAME": "Tub of Glitter",
+    "FLAVOR": "If something is terrible, just put some glitter on it and it will get better.",
+    "DESCRIPTIONS": [
+      "At the end of combat heal #b8 HP, if you have at least #b5 #ytheextravagant:Sparks in your #yExhaust pile."
+    ]
+  },
+  "theextravagant:TrustyOvercoat": {
+    "NAME": "Trusty Overcoat",
+    "FLAVOR": "A dog may be mans best friend but this overcoat is my best friend.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. Whenever you draw 15 cards, lose [E]"
+    ]
+  },
+  "theextravagant:EmbroidedHandkerchief": {
+    "NAME": "Embroided Handkerchief",
+    "FLAVOR": "It has the intitials J. L. on it. I wonder who it once belonged to.",
+    "DESCRIPTIONS": [
+      "On-Draw effects trigger twice."
+    ]
+  },
+  "theextravagant:OldMusket": {
+    "NAME": "Old Musket",
+    "FLAVOR": "A popular firearm before the invention of orbs.",
+    "DESCRIPTIONS": [
+      "Whenever you draw #b6 Attacks in one turn deal #b9 damage to all enemies."
+    ]
+  }
+}
