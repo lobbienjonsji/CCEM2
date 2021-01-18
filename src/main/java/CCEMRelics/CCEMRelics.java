@@ -237,6 +237,11 @@ public class CCEMRelics implements
         BaseMod.addRelic(new PowerPill(), RelicType.SHARED);
         BaseMod.addRelic(new CarbonFilter(), RelicType.SHARED);
         BaseMod.addRelic(new EnergeticInfuser(), RelicType.SHARED);
+        BaseMod.addRelic(new LagavulinClaw(), RelicType.SHARED);
+        BaseMod.addRelic(new ReaperScythe(), RelicType.SHARED);
+        BaseMod.addRelic(new ExpiredCReal(), RelicType.SHARED);
+        BaseMod.addRelic(new DarkMatter(), RelicType.SHARED);
+        BaseMod.addRelic(new DefectiveTurbocharger(), RelicType.SHARED);
         logger.info("Done adding relics!");
     }
 

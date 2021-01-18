@@ -92,17 +92,17 @@ public class EnergeticInfuser extends CustomRelic implements CustomSavable<Integ
         if(chosenType != null) {
             for (AbstractCard c : p.drawPile.group) {
                 if (c.type == chosenType) {
-                    c.modifyCostForCombat(c.costForTurn - 1);
+                    c.modifyCostForCombat(-1);
                 }
             }
             for (AbstractCard c : p.discardPile.group) {
                 if (c.type == chosenType) {
-                    c.modifyCostForCombat(c.costForTurn - 1);
+                    c.modifyCostForCombat(-1);
                 }
             }
             for (AbstractCard c : p.exhaustPile.group) {
                 if (c.type == chosenType) {
-                    c.modifyCostForCombat(c.costForTurn - 1);
+                    c.modifyCostForCombat(-1);
                 }
             }
         }
@@ -119,9 +119,9 @@ public class EnergeticInfuser extends CustomRelic implements CustomSavable<Integ
         }
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup choices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        choices.addToBottom(new EnergeticInfuserAttackChoice());
-        choices.addToBottom(new EnergeticInfuserSkillChoice());
-        choices.addToBottom(new EnergeticInfuserPowerChoice());
+        choices.addToTop(new EnergeticInfuserAttackChoice());
+        choices.addToTop(new EnergeticInfuserSkillChoice());
+        choices.addToTop(new EnergeticInfuserPowerChoice());
         AbstractDungeon.gridSelectScreen.open(choices, 1, DESCRIPTIONS[1] + name + DESCRIPTIONS[2], false, false, false, false);
     }
 

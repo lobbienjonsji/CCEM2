@@ -436,7 +436,7 @@
     "FLAVOR": "Makes great tea.",
     "DESCRIPTIONS": [
       "Upon pickup, choose #yAttack, #ySkill or #yPower. ALL cards of the chosen type cost 1 [E] less.",
-      "Select a card to infuse using the ",
+      "Select a card type to infuse using the ",
       ".",
       " is currently infusing ",
       "the vast air of an empty bug",
@@ -444,6 +444,41 @@
       "#ySkills",
       "#yPowers",
       " to cost 1 [E] less."
+    ]
+  },
+  "CCEMRelics:LagavulinClaw": {
+    "NAME": "Lagavulin Claw",
+    "FLAVOR": "Rumors say the Lagavulin this belongs to is still out there.",
+    "DESCRIPTIONS": [
+      "Start combat with #b8 #yMetallicize. The first time you take unblocked attack damage, lose #b8 #yMetallicize."
+    ]
+  },
+  "CCEMRelics:ReaperScythe": {
+    "NAME": "Reaper's Scythe",
+    "FLAVOR": "Death comes for you.",
+    "DESCRIPTIONS": [
+      "At the end of each turn, kill ANY characters below #b33% HP. (This can affect you)"
+    ]
+  },
+  "CCEMRelics:ExpiredCReal": {
+    "NAME": "Expired-C-Real",
+    "FLAVOR": "Best Before: Two days ago.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. ALL enemies start with #b2 #yIntangible."
+    ]
+  },
+  "CCEMRelics:DarkMatter": {
+    "NAME": "Dark Matter",
+    "FLAVOR": "Try our fat free version Lite Matter.",
+    "DESCRIPTIONS": [
+      "At the start of each turn, shuffle a #yVoid into your draw pile. Whenever you draw a #yVoid, #yExhaust it, gain [E] [E] and draw a card."
+    ]
+  },
+  "CCEMRelics:DefectiveTurbocharger": {
+    "NAME": "Defective Turbocharger",
+    "FLAVOR": "Was recalled 4 years ago.",
+    "DESCRIPTIONS": [
+      "Start combat with #r-15 #yStrength and #b5 #yRitual."
     ]
   }
 }
