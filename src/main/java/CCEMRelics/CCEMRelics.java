@@ -213,6 +213,7 @@ public class CCEMRelics implements
         BaseMod.addRelic(new OldTooth(), RelicType.SHARED);
         //BaseMod.addRelic(new WhiteNoiseMachine(), RelicType.SHARED);
         BaseMod.addRelic(new OrganicArmor(), RelicType.SHARED);
+
         //LC Added these relics, go yell at him if something went wrong
         BaseMod.addRelic(new SelfSharpeningBlade(), RelicType.SHARED);
         BaseMod.addRelic(new SoftDrink(), RelicType.SHARED);
@@ -225,6 +226,17 @@ public class CCEMRelics implements
         BaseMod.addRelic(new FiftyFTOfRope(), RelicType.SHARED);
         BaseMod.addRelic(new BundleOfChain(), RelicType.SHARED);
         BaseMod.addRelic(new MissingSock(), RelicType.SHARED);
+        BaseMod.addRelic(new IronFruit(), RelicType.SHARED);
+        BaseMod.addRelic(new GlassOfMilk(), RelicType.SHARED);
+        BaseMod.addRelic(new HeirloomTomato(), RelicType.SHARED);
+        BaseMod.addRelic(new BundleOfDynamite(), RelicType.SHARED);
+        BaseMod.addRelic(new Apple(), RelicType.SHARED);
+        BaseMod.addRelic(new ChainBlade(), RelicType.SHARED);
+        BaseMod.addRelic(new ModularBuildingCube(), RelicType.SHARED);
+        BaseMod.addRelic(new ImbuedSpirit(), RelicType.SHARED);
+        BaseMod.addRelic(new PowerPill(), RelicType.SHARED);
+        BaseMod.addRelic(new CarbonFilter(), RelicType.SHARED);
+        BaseMod.addRelic(new EnergeticInfuser(), RelicType.SHARED);
         logger.info("Done adding relics!");
     }
 

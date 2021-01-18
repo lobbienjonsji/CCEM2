@@ -326,7 +326,7 @@
     "NAME": "Hedge Maize",
     "FLAVOR": "It's a bit corny.",
     "DESCRIPTIONS": [
-      "Whenever you enter a #y? room, heal 5 HP."
+      "Whenever you enter a #y? room, heal #b5 HP."
     ]
   },
   "CCEMRelics:FiftyFTOfRope": {
@@ -359,6 +359,91 @@
       "Select a card to stuff into the ",
       ".",
       " will start at the bottom of your draw pile in every combat."
+    ]
+  },
+  "CCEMRelics:IronFruit": {
+    "NAME": "Iron Fruit",
+    "FLAVOR": "Warning: May break teeth.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b5 Max HP and #yUpgrade a random card in your deck."
+    ]
+  },
+  "CCEMRelics:GlassOfMilk": {
+    "NAME": "Glass of Milk",
+    "FLAVOR": "Don't cry over spilled milk. Instead, get violent.",
+    "DESCRIPTIONS": [
+      "At the start of each turn gain #b5 #yBlock. After you take unblocked Attack damage, deal #b5 damage to a random enemy at the start of each turn for the rest of combat instead."
+    ]
+  },
+  "CCEMRelics:HeirloomTomato": {
+    "NAME": "Heirloom Tomato",
+    "FLAVOR": "Is it pronounced Tomato or Tomato?",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b5 Max HP. At the end of combat, Heal #b2 HP."
+    ]
+  },
+  "CCEMRelics:BundleOfDynamite": {
+    "NAME": "Bundle of Dynamite",
+    "FLAVOR": "Some say I have an explosive temper.",
+    "DESCRIPTIONS": [
+      "Whenever you draw the last card in your draw pile, deal #b15 damage to a random enemy."
+    ]
+  },
+  "CCEMRelics:Apple": {
+    "NAME": "Apple",
+    "FLAVOR": "So the rumor was true.",
+    "DESCRIPTIONS": [
+      "At the end of combat, gain #b3 Max HP if your current HP is less than 50% of your Max HP."
+    ]
+  },
+  "CCEMRelics:ChainBlade": {
+    "NAME": "Chain Blade",
+    "FLAVOR": "It's like whiplash but more painful.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain an additional copy of all cards with #yccemrelics:Chain in your deck."
+    ]
+  },
+  "CCEMRelics:ModularBuildingCube": {
+    "NAME": "Modular Building Cube",
+    "FLAVOR": "Patented by ARME.",
+    "DESCRIPTIONS": [
+      "At the start of combat gain #b5 #yBlock for each #yColorless card in your deck."
+    ]
+  },
+  "CCEMRelics:ImbuedSpirit": {
+    "NAME": "Imbued Spirit",
+    "FLAVOR": "Become one with oneself.",
+    "DESCRIPTIONS": [
+      "At the start of combat Apply #b1 #yWeak and #b1 #yVulnerable to ALL enemies for each #yPower in your deck."
+    ]
+  },
+  "CCEMRelics:PowerPill": {
+    "NAME": "Power Pill",
+    "FLAVOR": "Normally associated with a sentient wheel of cheese.",
+    "DESCRIPTIONS": [
+      "ALL #yPowers have #yccemrelics:Chain."
+    ]
+  },
+  "CCEMRelics:CarbonFilter": {
+    "NAME": "Carbon Filter",
+    "FLAVOR": "This removes carbon from your search history.",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card, draw an extra card at the start of your next turn."
+    ]
+  },
+  "CCEMRelics:EnergeticInfuser": {
+    "NAME": "Energetic Infuser",
+    "FLAVOR": "Makes great tea.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #yAttack, #ySkill or #yPower. ALL cards of the chosen type cost 1 [E] less.",
+      "Select a card to infuse using the ",
+      ".",
+      " is currently infusing ",
+      "the vast air of an empty bug",
+      "#yAttacks",
+      "#ySkills",
+      "#yPowers",
+      " to cost 1 [E] less."
     ]
   }
 }

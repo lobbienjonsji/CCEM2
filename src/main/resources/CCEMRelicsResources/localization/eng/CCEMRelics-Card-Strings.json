@@ -20,5 +20,20 @@
   {
     "NAME": "",
     "DESCRIPTION": " NL ccemrelics:Chain."
+  },
+  "CCEMRelics:EnergeticInfuserAttackChoice":
+  {
+    "NAME": "Attacks",
+    "DESCRIPTION": "All #yAttacks cost 1 [E] less"
+  },
+  "CCEMRelics:EnergeticInfuserSkillChoice":
+  {
+    "NAME": "Skills",
+    "DESCRIPTION": "All #ySkills cost 1 [E] less"
+  },
+  "CCEMRelics:EnergeticInfuserPowerChoice":
+  {
+    "NAME": "Powers",
+    "DESCRIPTION": "All #yPowers cost 1 [E] less"
   }
 }

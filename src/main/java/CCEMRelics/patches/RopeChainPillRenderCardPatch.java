@@ -2,6 +2,7 @@ package CCEMRelics.patches;
 
 import CCEMRelics.relics.BundleOfChain;
 import CCEMRelics.relics.FiftyFTOfRope;
+import CCEMRelics.relics.PowerPill;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
         clz = AbstractCard.class,
         method = "renderCard"
 )
-public class RopeAndChainRenderCardPatch {
+public class RopeChainPillRenderCardPatch {
 
     public static void Postfix(AbstractCard __instance, SpriteBatch sb, boolean hovered, boolean selected)
     {
@@ -77,6 +78,38 @@ public class RopeAndChainRenderCardPatch {
                                 0,
                                 bundleOfChainTexture.getWidth(),
                                 bundleOfChainTexture.getHeight(),
+                                false,
+                                false
+                        );
+                    }
+                }
+                if(AbstractDungeon.player.hasRelic(PowerPill.ID))
+                {
+                    if(__instance.type == AbstractCard.CardType.POWER)
+                    {
+                        PowerPill relic = (PowerPill) AbstractDungeon.player.getRelic(PowerPill.ID);
+                        Texture powerPillTexture = relic.getPowerPillTexture();
+                        Vector2 tmp = new Vector2(135F, 185F);
+                        tmp.rotate(__instance.angle);
+                        tmp.scl(__instance.drawScale * Settings.scale);
+
+                        sb.setColor(Color.WHITE.cpy());
+
+                        sb.draw(
+                                powerPillTexture,
+                                tmp.x + __instance.current_x - (float) powerPillTexture.getWidth() / 2.0F,
+                                tmp.y + __instance.current_y - (float) powerPillTexture.getHeight() / 2.0F,
+                                (float) powerPillTexture.getWidth() / 2.0F,
+                                (float) powerPillTexture.getHeight() / 2.0F,
+                                (float) powerPillTexture.getWidth(),
+                                (float) powerPillTexture.getHeight(),
+                                __instance.drawScale * 2.5F,
+                                __instance.drawScale * 2.5F,
+                                __instance.angle,
+                                0,
+                                0,
+                                powerPillTexture.getWidth(),
+                                powerPillTexture.getHeight(),
                                 false,
                                 false
                         );
