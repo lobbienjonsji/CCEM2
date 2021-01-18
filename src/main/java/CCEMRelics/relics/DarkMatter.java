@@ -40,6 +40,7 @@ public class DarkMatter extends CustomRelic {
     @Override
     public void atTurnStart()
     {
+        this.flash();
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, true));
     }
 

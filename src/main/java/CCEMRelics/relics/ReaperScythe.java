@@ -2,8 +2,10 @@ package CCEMRelics.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -69,6 +71,7 @@ public class ReaperScythe extends CustomRelic {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(p, this));
             this.addToBot(new InstantKillAction(p));
+            this.addToBot(new DamageAction(p, new DamageInfo(p, 1, DamageInfo.DamageType.HP_LOSS)));
         }
     }
 
