@@ -20,5 +20,20 @@
   {
     "NAME": "",
     "DESCRIPTION": " NL ccemrelics:Chain."
+  },
+  "CCEMRelics:EnergeticInfuserAttackChoice":
+  {
+    "NAME": "Attacks",
+    "DESCRIPTION": "All Attacks cost 1 [E] less"
+  },
+  "CCEMRelics:EnergeticInfuserSkillChoice":
+  {
+    "NAME": "Skills",
+    "DESCRIPTION": "All Skills cost 1 [E] less"
+  },
+  "CCEMRelics:EnergeticInfuserPowerChoice":
+  {
+    "NAME": "Powers",
+    "DESCRIPTION": "All Powers cost 1 [E] less"
   }
 }
