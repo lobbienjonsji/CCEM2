@@ -46,7 +46,6 @@ public class BundleOfChain extends CustomRelic implements CustomSavable<String> 
 
     @Override
     public void atBattleStartPreDraw() {
-        super.atBattleStartPreDraw();
         AbstractPlayer p = AbstractDungeon.player;
         for(AbstractCard c : p.drawPile.group)
         {
