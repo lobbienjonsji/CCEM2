@@ -103,7 +103,7 @@ public class RerollRewards extends CustomReward {
         while (true) {
             while (var11.hasNext()) {
                 c = (AbstractCard) var11.next();
-                if (c.rarity != AbstractCard.CardRarity.RARE && cardRng.randomBoolean((float) ReflectionHacks.getPrivateStatic(float.class, "cardUpgradedChance")) && c.canUpgrade()) {
+                if (c.rarity != AbstractCard.CardRarity.RARE && cardRng.randomBoolean(ReflectionHacks.getPrivateStatic(float.class, "cardUpgradedChance")) && c.canUpgrade()) {
                     c.upgrade();
                 } else if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
                     c.upgrade();
