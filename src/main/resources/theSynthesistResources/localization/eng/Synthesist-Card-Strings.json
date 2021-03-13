@@ -19,5 +19,19 @@
   "theSynthesist:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+
+  "theSynthesist:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theSynthesist:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theSynthesist:Chug": {
+    "NAME": "Chug",
+    "DESCRIPTION": "Consume your current thesynthesist:mix and start a new thesynthesist:mix. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Consume your current thesynthesist:mix and start a new thesynthesist:mix."
   }
 }

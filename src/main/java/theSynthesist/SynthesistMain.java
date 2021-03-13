@@ -2,6 +2,8 @@ package theSynthesist;
 
 //TODO: Unify all the mod initializations and whatever into one central file?
 
+import ACCEMCore.util.IDCheckDontTouchPls;
+import ACCEMCore.util.TextureLoader;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.interfaces.*;
@@ -9,19 +11,23 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theSynthesist.cards.Defend;
+import theSynthesist.cards.Strike;
 import theSynthesist.characters.TheSynthesist;
-import theextravagant.util.IDCheckDontTouchPls;
-import theextravagant.util.TextureLoader;
+import theSynthesist.mix.SynthesistMix;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -35,6 +41,9 @@ public class SynthesistMain implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
+        OnStartBattleSubscriber,
+        PostBattleSubscriber,
+        PostRenderSubscriber,
         PostInitializeSubscriber {
 
     public static final Logger logger = LogManager.getLogger(TheSynthesist.class.getName());
@@ -74,6 +83,8 @@ public class SynthesistMain implements
 
     //public static final String THE_DEFAULT_SKELETON_ATLAS = "theSynthesistResources/images/char/SynthesistCharacter/skeleton.atlas";
     //public static final String THE_DEFAULT_SKELETON_JSON = "theSynthesistResources/images/char/SynthesistCharacter/skeleton.json";
+
+    public static boolean renderMix = false;
 
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
@@ -282,8 +293,8 @@ public class SynthesistMain implements
         
         logger.info("Adding cards");
 
-        //addAndUnlockCard(new Strike());
-        //addAndUnlockCard(new Defend());
+        addAndUnlockCard(new Strike());
+        addAndUnlockCard(new Defend());
 
 
         /*addAndUnlockCard(new OrbSkill());
@@ -368,5 +379,27 @@ public class SynthesistMain implements
     
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom room)
+    {
+        renderMix = false;
+    }
+    @Override
+    public void receiveOnBattleStart(AbstractRoom room)
+    {
+        if(AbstractDungeon.player instanceof TheSynthesist)
+        {
+            ((TheSynthesist) AbstractDungeon.player).mix = new SynthesistMix();
+            renderMix = true;
+        }
+    }
+    @Override
+    public void receivePostRender(SpriteBatch spriteBatch) {
+        if(renderMix)
+        {
+            ((TheSynthesist)AbstractDungeon.player).mix.render(spriteBatch);
+        }
     }
 }

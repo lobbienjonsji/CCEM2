@@ -7,6 +7,8 @@ import static theSynthesist.characters.TheSynthesist.Enums.SYNTHESIST_COLOR;
 
 public abstract class AbstractSynthesistCard extends CustomCard {
 
+    public boolean differentUpgradeDescription;
+
     public AbstractSynthesistCard(
             final String id,
             final String name,
@@ -25,6 +27,8 @@ public abstract class AbstractSynthesistCard extends CustomCard {
         isDamageModified = false;
         isBlockModified = false;
         isMagicNumberModified = false;
+
+        differentUpgradeDescription = false;
     }
 
     public AbstractSynthesistCard(
@@ -39,6 +43,18 @@ public abstract class AbstractSynthesistCard extends CustomCard {
         this(id, languagePack.getCardStrings(id).NAME, img, cost,
                 languagePack.getCardStrings(id).DESCRIPTION, type, SYNTHESIST_COLOR, rarity, target);
 
+    }
+
+    @Override public void upgrade()
+    {
+        if(!this.upgraded) {
+            if(this.differentUpgradeDescription)
+            {
+                this.rawDescription = languagePack.getCardStrings(this.cardID).UPGRADE_DESCRIPTION;
+            }
+            this.upgradeName();
+            this.initializeDescription();
+        }
     }
 
 }

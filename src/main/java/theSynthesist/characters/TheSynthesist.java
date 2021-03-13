@@ -18,6 +18,10 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import theSynthesist.cards.Chug;
+import theSynthesist.cards.Defend;
+import theSynthesist.cards.Strike;
+import theSynthesist.mix.SynthesistMix;
 
 import java.util.ArrayList;
 
@@ -36,6 +40,7 @@ public class TheSynthesist extends CustomPlayer {
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
+
     public static final int ENERGY_PER_TURN = 3;
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
@@ -47,6 +52,8 @@ public class TheSynthesist extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
+
+    public SynthesistMix mix;
 
     //TODO: Custom orb?
     public static final String[] orbTextures = {
@@ -104,6 +111,14 @@ public class TheSynthesist extends CustomPlayer {
         
         logger.info("Begin loading starter Deck Strings");
 
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Chug.ID);
 
         //retVal.add(TestCard.ID);
         //TODO: add cards

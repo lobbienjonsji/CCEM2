@@ -15,6 +15,13 @@
       "These are not actually orbs."
     ]
   },
+  "theSynthesist:Mix": {
+    "NAME": "Mix",
+    "DESCRIPTION": [
+      "A special mixture that the Synthesist has concocted. Can be #yconsumed to activate it's effects.",
+      "Your mixture is #yFrozen. It's drink timer will not advance and you cannot add #yIngredients to your mix."
+    ]
+  },
   "theSynthesist:Flameroot": {
     "NAME": "Flameroot",
     "DESCRIPTION": [
