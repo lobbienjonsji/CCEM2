@@ -1,6 +1,6 @@
 package theSynthesist.cards;
 
-import theSynthesist.SynthesistMain;
+import theSynthesist.theSynthesist;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
@@ -12,7 +12,7 @@ public abstract class AbstractPurifiableCard extends AbstractSynthesistCard{
     public boolean isPurityNumberModified;
 
     private final String PURITY_NAMES = "PurityNames";
-    private final String[] PurityNamesArray = languagePack.getCardStrings(SynthesistMain.makeID(PURITY_NAMES)).EXTENDED_DESCRIPTION;
+    private final String[] PurityNamesArray = languagePack.getCardStrings(theSynthesist.makeID(PURITY_NAMES)).EXTENDED_DESCRIPTION;
 
     public AbstractPurifiableCard(
             final String id,

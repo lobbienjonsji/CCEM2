@@ -4,14 +4,13 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theSynthesist.SynthesistMain;
 
 public class Flameroot extends AbstractMixIngredient {
 
-    public static final String ID = SynthesistMain.makeID(Flameroot.class.getSimpleName());
+    public static final String ID = Flameroot.class.getSimpleName();
 
     public Flameroot(int addAmount) {
-        super(ID);
+        super(ID, addAmount);
     }
 
     @Override

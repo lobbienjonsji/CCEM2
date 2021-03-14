@@ -18,17 +18,14 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import theSynthesist.cards.Chug;
-import theSynthesist.cards.Defend;
-import theSynthesist.cards.Strike;
+import theSynthesist.cards.*;
 import theSynthesist.mix.SynthesistMix;
 
 import java.util.ArrayList;
 
-import static theSynthesist.SynthesistMain.*;
-import static theextravagant.theextravagant.makeID;
+import static theSynthesist.theSynthesist.*;
 
-public class TheSynthesist extends CustomPlayer {
+public class SynthesistChar extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
@@ -69,11 +66,11 @@ public class TheSynthesist extends CustomPlayer {
             "theSynthesistResources/images/char/synthesistChar/orb/layer4d.png",
             "theSynthesistResources/images/char/synthesistChar/orb/layer5d.png",};
 
-    public TheSynthesist(String name, PlayerClass setClass) {
+    public SynthesistChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "SynthesistResources/images/char/synthesistChar/orb/vfx.png", null,
+                "theSynthesistResources/images/char/synthesistChar/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "SynthesistResources/images/char/synthesistChar/Spriter/theDefaultAnimation.scml"));
+                        "theSynthesistResources/images/char/synthesistChar/Spriter/theDefaultAnimation.scml"));
         //TODO: swap this out for the proper animation once done
         
         
@@ -119,6 +116,8 @@ public class TheSynthesist extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Chug.ID);
+        retVal.add(InflamedSpice.ID);
+        retVal.add(CrystalBarrier.ID);
 
         //retVal.add(TestCard.ID);
         //TODO: add cards
@@ -190,7 +189,7 @@ public class TheSynthesist extends CustomPlayer {
     
     @Override
     public AbstractPlayer newInstance() {
-        return new TheSynthesist(name, chosenClass);
+        return new SynthesistChar(name, chosenClass);
     }
     
     @Override

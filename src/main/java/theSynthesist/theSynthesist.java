@@ -3,17 +3,13 @@ package theSynthesist;
 //TODO: Unify all the mod initializations and whatever into one central file?
 
 import ACCEMCore.util.IDCheckDontTouchPls;
-import ACCEMCore.util.TextureLoader;
 import basemod.BaseMod;
-import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,9 +20,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theSynthesist.cards.Defend;
-import theSynthesist.cards.Strike;
-import theSynthesist.characters.TheSynthesist;
+import theSynthesist.cards.*;
+import theSynthesist.characters.SynthesistChar;
 import theSynthesist.mix.SynthesistMix;
 
 import java.io.InputStream;
@@ -35,7 +30,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 //@SpireInitializer
-public class SynthesistMain implements
+public class theSynthesist implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
@@ -43,10 +38,11 @@ public class SynthesistMain implements
         EditCharactersSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
-        PostRenderSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        PostPlayerUpdateSubscriber,
+        PostDungeonInitializeSubscriber{
 
-    public static final Logger logger = LogManager.getLogger(TheSynthesist.class.getName());
+    public static final Logger logger = LogManager.getLogger(theSynthesist.class.getName());
     private static String modID;
 
     public static Properties theDefaultDefaultSettings = new Properties();
@@ -110,7 +106,7 @@ public class SynthesistMain implements
         return getModID() + "Resources/images/events/" + resourcePath;
     }
 
-    public SynthesistMain() {
+    public theSynthesist() {
         logger.info("Subscribe to BaseMod hooks");
         
         BaseMod.subscribe(this);
@@ -121,36 +117,22 @@ public class SynthesistMain implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + TheSynthesist.Enums.SYNTHESIST_COLOR.toString());
+        logger.info("Creating the color " + SynthesistChar.Enums.SYNTHESIST_COLOR.toString());
         
-        BaseMod.addColor(TheSynthesist.Enums.SYNTHESIST_COLOR, SYNTHESIST_COLOR, SYNTHESIST_COLOR, SYNTHESIST_COLOR,
+        BaseMod.addColor(SynthesistChar.Enums.SYNTHESIST_COLOR, SYNTHESIST_COLOR, SYNTHESIST_COLOR, SYNTHESIST_COLOR,
                 SYNTHESIST_COLOR, SYNTHESIST_COLOR, SYNTHESIST_COLOR, SYNTHESIST_COLOR,
                 ATTACK_SYNTHESIST_COLOR, SKILL_SYNTHESIST_COLOR, POWER_SYNTHESIST_COLOR, ENERGY_ORB_SYNTHESIST_COLOR,
                 ATTACK_SYNTHESIST_COLOR_PORTRAIT, SKILL_SYNTHESIST_COLOR_PORTRAIT, POWER_SYNTHESIST_COLOR_PORTRAIT,
                 ENERGY_ORB_SYNTHESIST_COLOR_PORTRAIT, CARD_ENERGY_ORB);
         
         logger.info("Done creating the color");
-        
-        
-        logger.info("Adding mod settings");
-        
-        
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE");
-        try {
-            SpireConfig config = new SpireConfig("theSynthesist", "theSynthesistConfig", theDefaultDefaultSettings);
-            
-            config.load();
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        logger.info("Done adding mod settings");
+
     }
     
     public static void setModID(String ID) {
         Gson coolG = new Gson();
         
-        InputStream in = SynthesistMain.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
+        InputStream in = theSynthesist.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
         logger.info("You are attempting to set your mod ID as: " + ID);
         if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) {
@@ -170,9 +152,9 @@ public class SynthesistMain implements
     private static void pathCheck() {
         Gson coolG = new Gson();
         
-        InputStream in = TheSynthesist.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
+        InputStream in = theSynthesist.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
-        String packageName = TheSynthesist.class.getPackage().getName();
+        String packageName = theSynthesist.class.getPackage().getName();
         FileHandle resourcePathExists = Gdx.files.internal(getModID() + "Resources");
         if (!modID.equals(EXCEPTION_STRINGS.DEVID)) {
             if (!packageName.equals(getModID())) {
@@ -202,30 +184,30 @@ public class SynthesistMain implements
                         "  \\__                     __/\n" +
                         "     \\__         ()    __/\n" +
                         "        \\_____________/");
-        SynthesistMain synthesistMod = new SynthesistMain();
+        theSynthesist synthesistMod = new theSynthesist();
         logger.info("The Synthesist Initialized - Cookies have been fed");
     }*/
     
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheSynthesist.Enums.THE_SYNTHESIST.toString());
+        logger.info("Beginning to edit characters. " + "Add " + SynthesistChar.Enums.THE_SYNTHESIST.toString());
         
-        BaseMod.addCharacter(new TheSynthesist("The Synthesist", TheSynthesist.Enums.THE_SYNTHESIST),
-                THE_SYNTHESIST_BUTTON, THE_SYNTHESIST_PORTRAIT, TheSynthesist.Enums.THE_SYNTHESIST);
+        BaseMod.addCharacter(new SynthesistChar("The Synthesist", SynthesistChar.Enums.THE_SYNTHESIST),
+                THE_SYNTHESIST_BUTTON, THE_SYNTHESIST_PORTRAIT, SynthesistChar.Enums.THE_SYNTHESIST);
         
         receiveEditPotions();
-        logger.info("Added " + TheSynthesist.Enums.THE_SYNTHESIST.toString());
+        logger.info("Added " + SynthesistChar.Enums.THE_SYNTHESIST.toString());
     }
     
     @Override
     public void receivePostInitialize() {
-        logger.info("Loading badge image and mod options");
+        //logger.info("Loading badge image and mod options");
         
         
-        Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
+        //Texture badgeTexture = TextureLoader.getTexture(BADGE_IMAGE);
         
         
-        ModPanel settingsPanel = new ModPanel();
+        //ModPanel settingsPanel = new ModPanel();
         
         
         /*ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
@@ -249,20 +231,20 @@ public class SynthesistMain implements
         */
         //settingsPanel.addUIElement(enableNormalsButton);
         
-        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+        //BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
         
         
         //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
         
         
-        logger.info("Done loading badge Image and mod options");
+        //.info("Done loading badge Image and mod options");
     }
     
     public void receiveEditPotions() {
         logger.info("Beginning to edit potions");
         
         
-        //BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheSynthesist.Enums.THE_SPELL_SCRIBE);
+        //BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, SynthesistChar.Enums.THE_SPELL_SCRIBE);
         
         logger.info("Done editing potions");
     }
@@ -295,6 +277,9 @@ public class SynthesistMain implements
 
         addAndUnlockCard(new Strike());
         addAndUnlockCard(new Defend());
+        addAndUnlockCard(new Chug());
+        addAndUnlockCard(new InflamedSpice());
+        addAndUnlockCard(new CrystalBarrier());
 
 
         /*addAndUnlockCard(new OrbSkill());
@@ -315,7 +300,7 @@ public class SynthesistMain implements
 
     private void addAndUnlockCharRelic(AbstractRelic relic)
     {
-        //BaseMod.addRelicToCustomPool(relic, TheSynthesist.Enums.SYNTHESIST_COLOR);
+        //BaseMod.addRelicToCustomPool(relic, SynthesistChar.Enums.SYNTHESIST_COLOR);
         UnlockTracker.markRelicAsSeen(relic.relicId);
     }
 
@@ -389,17 +374,46 @@ public class SynthesistMain implements
     @Override
     public void receiveOnBattleStart(AbstractRoom room)
     {
-        if(AbstractDungeon.player instanceof TheSynthesist)
+        if(AbstractDungeon.player instanceof SynthesistChar)
         {
-            ((TheSynthesist) AbstractDungeon.player).mix = new SynthesistMix();
+            ((SynthesistChar) AbstractDungeon.player).mix = new SynthesistMix();
             renderMix = true;
         }
     }
-    @Override
-    public void receivePostRender(SpriteBatch spriteBatch) {
+    //Called from the MixPatches patch
+    public static void receiveMixRender(SpriteBatch spriteBatch) {
         if(renderMix)
         {
-            ((TheSynthesist)AbstractDungeon.player).mix.render(spriteBatch);
+            if(AbstractDungeon.player instanceof SynthesistChar) {
+                SynthesistMix mix = ((SynthesistChar)AbstractDungeon.player).mix;
+                if(mix != null) {
+                    mix.render(spriteBatch);
+                }
+            }
         }
+    }
+
+    @Override
+    public void receivePostPlayerUpdate() {
+        if(AbstractDungeon.player instanceof SynthesistChar)
+        {
+            SynthesistMix mix = ((SynthesistChar)AbstractDungeon.player).mix;
+            if(mix != null) {
+                mix.update();
+            }
+        }
+    }
+
+    public static void receivePlayerEndTurn()
+    {
+        if(AbstractDungeon.player instanceof SynthesistChar)
+        {
+            ((SynthesistChar)AbstractDungeon.player).mix.mixEndTurn();
+        }
+    }
+
+    @Override
+    public void receivePostDungeonInitialize() {
+        renderMix = false;
     }
 }

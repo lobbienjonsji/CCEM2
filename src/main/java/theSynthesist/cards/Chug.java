@@ -3,17 +3,17 @@ package theSynthesist.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theSynthesist.SynthesistMain;
 import theSynthesist.actions.UseMixAction;
+import theSynthesist.theSynthesist;
 
-import static theSynthesist.SynthesistMain.makeCardPath;
+import static theSynthesist.theSynthesist.makeCardPath;
 
 ;
 
 public class Chug extends AbstractSynthesistCard {
 
     //ONLY KEEP WHAT YOU NEED
-    public static final String ID = SynthesistMain.makeID(Chug.class.getSimpleName());
+    public static final String ID = theSynthesist.makeID(Chug.class.getSimpleName());
     public static final String IMG = makeCardPath("Chug.png");
 
     private static final CardRarity RARITY = CardRarity.BASIC;

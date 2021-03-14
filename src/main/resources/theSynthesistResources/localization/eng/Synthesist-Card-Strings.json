@@ -31,7 +31,15 @@
   },
   "theSynthesist:Chug": {
     "NAME": "Chug",
-    "DESCRIPTION": "Consume your current thesynthesist:mix and start a new thesynthesist:mix. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Consume your current thesynthesist:mix and start a new thesynthesist:mix."
+    "DESCRIPTION": "Consume your current thesynthesist:Mix and start a new thesynthesist:Mix. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Consume your current thesynthesist:mix and start a new thesynthesist:Mix."
+  },
+  "theSynthesist:InflamedSpice": {
+    "NAME": "Inflamed Spice",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! thesynthesist:Flameroot to the thesynthesist:Mix."
+  },
+  "theSynthesist:CrystalBarrier": {
+    "NAME": "Crystal Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! thesynthesist:Crystal_Shards to the thesynthesist:Mix."
   }
 }

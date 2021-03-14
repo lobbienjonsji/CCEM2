@@ -16,12 +16,30 @@
       "multikeyword"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
-  },{
+  },
+  {
   "PROPER_NAME": "Mix",
   "NAMES": [
     "Mix",
     "mix"
   ],
   "DESCRIPTION": "A drink that you can consume to activate it's effects."
-}
+},
+  {
+    "PROPER_NAME": "Flameroot",
+    "NAMES": [
+      "Flameroot",
+      "flameroot"
+    ],
+    "DESCRIPTION": "A #yMix ingredient that deals damage to a random enemy."
+  },
+  {
+    "PROPER_NAME": "Crystal Shard",
+    "NAMES": [
+      "Crystal Shard",
+      "crystal_shard",
+      "crystal_shards"
+    ],
+    "DESCRIPTION": "A #yMix ingredient that gives you #yBlock."
+  }
 ]

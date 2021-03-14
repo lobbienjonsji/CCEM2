@@ -2,15 +2,15 @@ package theSynthesist.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theSynthesist.characters.TheSynthesist;
+import theSynthesist.characters.SynthesistChar;
 
 public class UseMixAction extends AbstractGameAction {
     @Override
     public void update() {
         this.isDone = true;
-        if(AbstractDungeon.player instanceof TheSynthesist)
+        if(AbstractDungeon.player instanceof SynthesistChar)
         {
-            ((TheSynthesist)AbstractDungeon.player).mix.drinkMix();
+            ((SynthesistChar)AbstractDungeon.player).mix.drinkMix();
         }
     }
 }

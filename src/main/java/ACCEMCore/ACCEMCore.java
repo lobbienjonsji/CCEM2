@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theSynthesist.SynthesistMain;
+import theSynthesist.theSynthesist;
 import theextravagant.theextravagant;
 
 import java.util.Properties;
@@ -47,7 +47,7 @@ public class ACCEMCore implements
     public static ACCEMCore ACCEMCore;
     public static CCEMRelics CCEMRelics;
     public static theextravagant theextravagant;
-    public static SynthesistMain SynthesistMain;
+    public static theSynthesist SynthesistMain;
 
     public ACCEMCore() {
         BaseMod.subscribe(this);
@@ -78,7 +78,7 @@ public class ACCEMCore implements
         if(isSynthesistEnabled)
         {
             logger.info("============CCEM NOW INITIALIZING THE SYNTHESIST============");
-            SynthesistMain = new SynthesistMain();
+            SynthesistMain = new theSynthesist();
             logger.info("============CCEM FINISHED INITIALIZING THE SYNTHESIST============");
         }
 
