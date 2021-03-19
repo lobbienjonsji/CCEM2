@@ -1,6 +1,7 @@
 package theSynthesist.mix;
 
 import ACCEMCore.util.TextureLoader;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -21,8 +22,14 @@ public class SynthesistMix {
     private static final String MIX_TEXTURE = "theSynthesistResources/images/orbs/Mix.png";
 
     public int turnCounter;
+    private static final int TURN_COUNTER_MIN = 0;
     public boolean frozen;
     private static final int TURNS_TO_DRINK = 3;
+
+    private float angleOffset = 360.0F;
+    private static final float ANGLE_MIN = 0.0F;
+    private static final float ANGLE_MAX = 360.0F;
+    private static final float ANGLE_CHANGE_RATE = 6.0F;
 
     public ArrayList<AbstractMixIngredient> ingredients;
     public Hitbox hb;
@@ -30,8 +37,8 @@ public class SynthesistMix {
     private static final float NUM_Y_OFFSET;
     private static final float WIDTH = 96.0F;
     private static final float HEIGHT = 96.0F;
-    private static final float FLOAT_Y_OFFSET = 250.0F;
-    private static final float INGREDIENT_Y_OFFSET = 100.0F;
+    private static final float FLOAT_X_OFFSET = 250.0F;
+    private static final float INGREDIENT_OFFSET = 100.0F;
     public float cX;
     public float cY;
     public float tX;
@@ -55,8 +62,8 @@ public class SynthesistMix {
         this.hb = new Hitbox(WIDTH * Settings.scale, HEIGHT * Settings.scale);
         this.img = TextureLoader.getTexture(MIX_TEXTURE);
 
-        this.cX = this.tX = AbstractDungeon.player.drawX;
-        this.cY = this.tY = FLOAT_Y_OFFSET * Settings.scale + AbstractDungeon.player.drawY + AbstractDungeon.player.hb_h / 2.0F;
+        this.cX = this.tX = FLOAT_X_OFFSET * Settings.scale + AbstractDungeon.player.drawX + AbstractDungeon.player.hb_w / 2.0F;
+        this.cY = this.tY = AbstractDungeon.player.drawY + AbstractDungeon.player.hb_h / 2.0F;
         this.hb.move(tX, tY);
     }
 
@@ -65,7 +72,7 @@ public class SynthesistMix {
         if(!frozen) {
             turnCounter++;
             if (turnCounter >= TURNS_TO_DRINK) {
-                turnCounter = 0;
+                turnCounter = TURN_COUNTER_MIN;
                 drinkMix();
             }
         }
@@ -97,11 +104,32 @@ public class SynthesistMix {
             i.use();
         }
         ingredients.clear();
-        turnCounter = 0;
+        turnCounter = TURN_COUNTER_MIN;
     }
 
     public void update()
     {
+        boolean isIngredientBeingHovered = false;
+        for(AbstractMixIngredient i : ingredients)
+        {
+            i.update();
+            if(i.hb.hovered)
+            {
+                isIngredientBeingHovered = true;
+            }
+        }
+
+
+        if(!isIngredientBeingHovered) {
+            this.angleOffset -= ANGLE_CHANGE_RATE * Gdx.graphics.getDeltaTime();
+        }
+        while(this.angleOffset <= ANGLE_MIN)
+        {
+            this.angleOffset += ANGLE_MAX;
+        }
+        this.setIngredientPositions();
+
+
         this.hb.update();
         if(this.hb.hovered)
         {
@@ -121,10 +149,6 @@ public class SynthesistMix {
                 tips.add(tipFrozen);
             }
             TipHelper.queuePowerTips(this.tX + WIDTH * Settings.scale, this.tY + 64.0F * Settings.scale, tips);
-        }
-        for(AbstractMixIngredient i : ingredients)
-        {
-            i.update();
         }
     }
 
@@ -154,18 +178,13 @@ public class SynthesistMix {
     }
 
     private void positionIngredient(AbstractMixIngredient ingredient, int index, int maxNum) {
-        float dist = (INGREDIENT_Y_OFFSET) * Settings.scale + (float)maxNum * 10.0F * Settings.scale;
-        float angle = 100.0F + (float)maxNum * 12.0F;
-        float offsetAngle = angle / 2.0F;
-        angle *= (float)index / ((float)maxNum - 1.0F);
-        angle += 90.0F - offsetAngle;
+        float dist = (INGREDIENT_OFFSET) * Settings.scale;
+        //float angle = 100.0F + (float)maxNum * 12.0F;
+        float angle = (ANGLE_MAX / (float)maxNum) * (float)index;
 
-        float ingredientX = dist * MathUtils.cosDeg(angle) + this.cX;
-        float ingredientY = dist * MathUtils.sinDeg(angle) + this.cY + this.hb.height / 2.0F;
-        if (maxNum == 1) {
-            ingredientX = this.cX;
-            ingredientY = (INGREDIENT_Y_OFFSET) * Settings.scale + this.cY + this.hb.height / 2.0F;
-        }
+        float ingredientX = dist * MathUtils.cosDeg(angle + angleOffset) + this.cX;
+        float ingredientY = dist * MathUtils.sinDeg(angle + angleOffset) + this.cY;
+
         ingredient.moveIngredient(ingredientX, ingredientY);
     }
 

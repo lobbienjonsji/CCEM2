@@ -37,6 +37,7 @@ public abstract class AbstractMixIngredient {
 
     public AbstractMixIngredient(final String ID, final int startingAmount)
     {
+
         this.scale = Settings.scale;
         this.color = Color.WHITE.cpy();
 
