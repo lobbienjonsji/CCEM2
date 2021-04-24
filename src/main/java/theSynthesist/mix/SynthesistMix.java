@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,6 +26,10 @@ public class SynthesistMix {
     private static final int TURN_COUNTER_MIN = 0;
     public boolean frozen;
     private static final int TURNS_TO_DRINK = 3;
+    public int frozenCounter;
+
+    private float flashTimer;
+    private Color flashColor = new Color(1.0F, 1.0F, 1.0F, 0.0F);
 
     private float angleOffset = 360.0F;
     private static final float ANGLE_MIN = 0.0F;
@@ -50,7 +55,7 @@ public class SynthesistMix {
     private static final String NAME = languagePack.getOrbString(theSynthesist.makeID("Mix")).NAME;
     private static final String[] DESCRIPTION = languagePack.getOrbString(theSynthesist.makeID("Mix")).DESCRIPTION;
     private static final String NAME_FROZEN = languagePack.getOrbString(theSynthesist.makeID("MixFrozen")).NAME;
-    private static final String DESCRIPTION_FROZEN = languagePack.getOrbString(theSynthesist.makeID("MixFrozen")).DESCRIPTION[0];
+    private static final String[] DESCRIPTION_FROZEN = languagePack.getOrbString(theSynthesist.makeID("MixFrozen")).DESCRIPTION;
 
 
     public SynthesistMix()
@@ -67,6 +72,24 @@ public class SynthesistMix {
         this.hb.move(tX, tY);
     }
 
+    public void freezeMix(int turnsToFreeze)
+    {
+        if(!frozen)
+        {
+            this.frozen = true;
+            this.frozenCounter += turnsToFreeze;
+        }
+    }
+
+    public void thawMix()
+    {
+        if(frozen)
+        {
+            this.frozenCounter = 0;
+            this.frozen = false;
+        }
+    }
+
     public void mixEndTurn()
     {
         if(!frozen) {
@@ -76,11 +99,19 @@ public class SynthesistMix {
                 drinkMix();
             }
         }
+        else {
+            this.frozenCounter--;
+            if(this.frozenCounter == 0)
+            {
+                this.thawMix();
+            }
+        }
 
     }
 
     public void addIngredient(AbstractMixIngredient ingredientToAdd)
     {
+        this.flash();
         if(!frozen) {
             boolean alreadyAdded = false;
 
@@ -99,6 +130,7 @@ public class SynthesistMix {
 
     public void drinkMix()
     {
+        this.flash();
         for(AbstractMixIngredient i : ingredients)
         {
             i.use();
@@ -145,11 +177,21 @@ public class SynthesistMix {
             tips.add(tip);
             if(this.frozen)
             {
-                PowerTip tipFrozen = new PowerTip(NAME_FROZEN, DESCRIPTION_FROZEN);
+                String frozenDescriptionToShow;
+                if(this.frozenCounter == 1)
+                {
+                    frozenDescriptionToShow = DESCRIPTION_FROZEN[0] + this.frozenCounter + DESCRIPTION_FROZEN[1];
+                }
+                else {
+                    frozenDescriptionToShow = DESCRIPTION_FROZEN[0] + this.frozenCounter + DESCRIPTION_FROZEN[2];
+                }
+                PowerTip tipFrozen = new PowerTip(NAME_FROZEN, frozenDescriptionToShow);
                 tips.add(tipFrozen);
             }
             TipHelper.queuePowerTips(this.tX + WIDTH * Settings.scale, this.tY + 64.0F * Settings.scale, tips);
         }
+
+        this.updateFlash();
     }
 
     public void render(SpriteBatch sb)
@@ -162,11 +204,18 @@ public class SynthesistMix {
         {
             i.render(sb);
         }
+        if(this.flashTimer > 0.0F)
+        {
+            renderFlash(sb);
+        }
     }
 
     protected void renderText(SpriteBatch sb)
     {
         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(TURNS_TO_DRINK - this.turnCounter), this.cX + NUM_X_OFFSET, this.cY + NUM_Y_OFFSET, Color.WHITE.cpy(), 0.7F);
+        if(this.frozen) {
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.frozenCounter), this.cX - NUM_X_OFFSET, this.cY + NUM_Y_OFFSET, Color.SKY.cpy(), 0.7F);
+        }
     }
 
     public void setIngredientPositions()
@@ -188,6 +237,32 @@ public class SynthesistMix {
         ingredient.moveIngredient(ingredientX, ingredientY);
     }
 
+    private void renderFlash(SpriteBatch sb) {
+        float tmp = Interpolation.exp10In.apply(0.0F, 4.0F, this.flashTimer / 2.0F);
+        sb.setBlendFunction(770, 1);
+        this.flashColor.a = this.flashTimer * 0.2F;
+        sb.setColor(this.flashColor);
+
+        sb.draw(this.img, this.cX - (WIDTH / 2.0F), this.cY - (HEIGHT / 2.0F), WIDTH / 2.0F, HEIGHT / 2.0F, WIDTH, HEIGHT, this.scale + tmp, this.scale + tmp, 0.0F, 0, 0, (int)WIDTH, (int)HEIGHT, false, false);
+        sb.draw(this.img, this.cX - (WIDTH / 2.0F), this.cY - (HEIGHT / 2.0F), WIDTH / 2.0F, HEIGHT / 2.0F, WIDTH, HEIGHT, this.scale + tmp * 0.66F, this.scale + tmp * 0.66F, 0.0F, 0, 0, (int)WIDTH, (int)HEIGHT, false, false);
+        sb.draw(this.img, this.cX - (WIDTH / 2.0F), this.cY - (HEIGHT / 2.0F), WIDTH / 2.0F, HEIGHT / 2.0F, WIDTH, HEIGHT, this.scale + tmp / 3.0F, this.scale + tmp / 3.0F, 0.0F, 0, 0, (int)WIDTH, (int)HEIGHT, false, false);
+        sb.setBlendFunction(770, 771);
+    }
+
+    private void updateFlash()
+    {
+        if (this.flashTimer != 0.0F) {
+            this.flashTimer -= Gdx.graphics.getDeltaTime();
+            if (this.flashTimer < 0.0F) {
+                this.flashTimer = 0.0F;
+            }
+        }
+    }
+
+    public void flash()
+    {
+        this.flashTimer = 2.0F;
+    }
 
     static {
         NUM_X_OFFSET = 20.0F * Settings.scale;

@@ -18,6 +18,23 @@
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
   },
   {
+    "PROPER_NAME": "Freeze",
+    "NAMES": [
+      "Freeze",
+      "freeze"
+    ],
+    "DESCRIPTION": "Prevents the adding of #yIngredients to the #yMix, and pauses it's drink timer."
+  },
+  {
+    "PROPER_NAME": "Thaw",
+    "NAMES": [
+      "Thaw",
+      "thaw",
+      "thaws"
+    ],
+    "DESCRIPTION": "Allows for #yIngredients to be added to the #yMix once again, and resumes it's drink timer."
+  },
+  {
   "PROPER_NAME": "Mix",
   "NAMES": [
     "Mix",
@@ -31,7 +48,7 @@
       "Flameroot",
       "flameroot"
     ],
-    "DESCRIPTION": "A #yMix ingredient that deals damage to a random enemy."
+    "DESCRIPTION": "A #yMix #yIngredient that deals damage to a random enemy."
   },
   {
     "PROPER_NAME": "Crystal Shard",
@@ -40,6 +57,6 @@
       "crystal_shard",
       "crystal_shards"
     ],
-    "DESCRIPTION": "A #yMix ingredient that gives you #yBlock."
+    "DESCRIPTION": "A #yMix #yIngredient that gives you #yBlock."
   }
 ]

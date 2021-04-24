@@ -27,7 +27,9 @@
   "theSynthesist:MixFrozen": {
     "NAME": "Frozen",
     "DESCRIPTION": [
-      "Your mixture is #yFrozen. It's drink timer will not advance and you cannot add #yIngredients to your mix."
+      "Your mixture is #yFrozen. It's drink timer will not advance and you cannot add #yIngredients to your mix. This lasts for #b",
+      " more turn.",
+      " more turns."
     ]
   },
   "theSynthesist:Flameroot": {

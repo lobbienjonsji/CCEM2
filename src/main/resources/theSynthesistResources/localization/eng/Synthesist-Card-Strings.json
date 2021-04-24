@@ -41,5 +41,14 @@
   "theSynthesist:CrystalBarrier": {
     "NAME": "Crystal Barrier",
     "DESCRIPTION": "Gain !B! Block. NL Add !M! thesynthesist:Crystal_Shards to the thesynthesist:Mix."
+  },
+  "theSynthesist:BoilingBolt": {
+    "NAME": "Boiling Bolt",
+    "DESCRIPTION": "thesynthesist:Thaw the thesynthesist:Mix. NL Draw a card. NL Deal damage equal to double it's cost.",
+    "UPGRADE_DESCRIPTION": "thesynthesist:Thaw the thesynthesist:Mix. NL Draw a card. NL Deal damage equal to triple it's cost."
+  },
+  "theSynthesist:SnapFreeze": {
+    "NAME": "Snap Freeze",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }

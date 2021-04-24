@@ -40,7 +40,8 @@ public class theSynthesist implements
         PostBattleSubscriber,
         PostInitializeSubscriber,
         PostPlayerUpdateSubscriber,
-        PostDungeonInitializeSubscriber{
+        PostDungeonInitializeSubscriber,
+        PostDrawSubscriber{
 
     public static final Logger logger = LogManager.getLogger(theSynthesist.class.getName());
     private static String modID;
@@ -80,6 +81,8 @@ public class theSynthesist implements
     //public static final String THE_DEFAULT_SKELETON_ATLAS = "theSynthesistResources/images/char/SynthesistCharacter/skeleton.atlas";
     //public static final String THE_DEFAULT_SKELETON_JSON = "theSynthesistResources/images/char/SynthesistCharacter/skeleton.json";
 
+    public static boolean boilingBoltTracker = false;
+    public static int boilingBoltCost = 0;
     public static boolean renderMix = false;
 
     public static String makeCardPath(String resourcePath) {
@@ -280,6 +283,8 @@ public class theSynthesist implements
         addAndUnlockCard(new Chug());
         addAndUnlockCard(new InflamedSpice());
         addAndUnlockCard(new CrystalBarrier());
+        addAndUnlockCard(new BoilingBolt());
+        addAndUnlockCard(new SnapFreeze());
 
 
         /*addAndUnlockCard(new OrbSkill());
@@ -415,5 +420,13 @@ public class theSynthesist implements
     @Override
     public void receivePostDungeonInitialize() {
         renderMix = false;
+    }
+
+    @Override
+    public void receivePostDraw(AbstractCard abstractCard) {
+        if(boilingBoltTracker)
+        {
+            boilingBoltCost = abstractCard.costForTurn;
+        }
     }
 }

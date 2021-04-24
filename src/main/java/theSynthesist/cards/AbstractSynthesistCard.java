@@ -4,7 +4,6 @@ import basemod.abstracts.CustomCard;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theSynthesist.characters.SynthesistChar.Enums.SYNTHESIST_COLOR;
-import static theSynthesist.theSynthesist.makeCardPath;
 
 public abstract class AbstractSynthesistCard extends CustomCard {
 
@@ -22,9 +21,9 @@ public abstract class AbstractSynthesistCard extends CustomCard {
             final CardTarget target
     )
     {
-        //TODO: make it get images properly. this is placeholder for now
-        //super(id, name, img, cost, rawDescription, type, color, rarity, target);
-        super(id, name, makeCardPath("AcidSplash.png"), cost, rawDescription, type, color, rarity, target);
+        super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        //placeholder for grabbing images
+        //super(id, name, makeCardPath("AcidSplash.png"), cost, rawDescription, type, color, rarity, target);
         isCostModified = false;
         isCostModifiedForTurn = false;
         isDamageModified = false;
