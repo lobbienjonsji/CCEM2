@@ -19,5 +19,36 @@
   "theSynthesist:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+
+  "theSynthesist:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theSynthesist:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theSynthesist:Chug": {
+    "NAME": "Chug",
+    "DESCRIPTION": "Consume your current thesynthesist:Mix and start a new thesynthesist:Mix. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Consume your current thesynthesist:mix and start a new thesynthesist:Mix."
+  },
+  "theSynthesist:InflamedSpice": {
+    "NAME": "Inflamed Spice",
+    "DESCRIPTION": "Deal !D! damage. NL Add !M! thesynthesist:Flameroot to the thesynthesist:Mix."
+  },
+  "theSynthesist:CrystalBarrier": {
+    "NAME": "Crystal Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! thesynthesist:Crystal_Shards to the thesynthesist:Mix."
+  },
+  "theSynthesist:BoilingBolt": {
+    "NAME": "Boiling Bolt",
+    "DESCRIPTION": "thesynthesist:Thaw the thesynthesist:Mix. NL Draw a card. NL Deal damage equal to double it's cost.",
+    "UPGRADE_DESCRIPTION": "thesynthesist:Thaw the thesynthesist:Mix. NL Draw a card. NL Deal damage equal to triple it's cost."
+  },
+  "theSynthesist:SnapFreeze": {
+    "NAME": "Snap Freeze",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }

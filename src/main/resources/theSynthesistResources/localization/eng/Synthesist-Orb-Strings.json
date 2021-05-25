@@ -15,6 +15,23 @@
       "These are not actually orbs."
     ]
   },
+  "theSynthesist:Mix": {
+    "NAME": "Mix",
+    "DESCRIPTION": [
+      "A special mixture that the Synthesist has concocted. Add ingredients to change it's effect when consumed.",
+      " #b",
+      " turns until the mix will be automatically consumed.",
+      " The Mix will be consumed at the end of this turn."
+    ]
+  },
+  "theSynthesist:MixFrozen": {
+    "NAME": "Frozen",
+    "DESCRIPTION": [
+      "Your mixture is #yFrozen. It's drink timer will not advance and you cannot add #yIngredients to your mix. This lasts for #b",
+      " more turn.",
+      " more turns."
+    ]
+  },
   "theSynthesist:Flameroot": {
     "NAME": "Flameroot",
     "DESCRIPTION": [
@@ -39,8 +56,8 @@
   "theSynthesist:DwarvenAle": {
     "NAME": "Dwarven Ale",
     "DESCRIPTION": [
-      "Upgrade a random card in your draw pile.",
       "Upgrade #b",
+      " random card in your draw pile.",
       " random cards in your draw pile."
     ]
   },

@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theSynthesist.SynthesistMain;
+import theSynthesist.theSynthesist;
 import theextravagant.theextravagant;
 
 import java.util.Properties;
@@ -29,7 +29,7 @@ public class ACCEMCore implements
     public static final Logger logger = LogManager.getLogger(ACCEMCore.class.getName());
 
     public static final String ENABLE_EXTRAVAGANT = "enableEnableExtravagant";
-    public static final String ENABLE_SYNTHESIST = "enableSynthesistChar";
+    public static final String ENABLE_SYNTHESIST = "enableSynthesistCharacter";
     private static final String AUTHOR = "Lobbienjonsji, Left Click, EnderGrimm";
     //private static final String DESCRIPTION = "Im not your ordinary byrd. I am a peacock.";
     private static final String DESCRIPTION = "Core for CCEM";
@@ -38,7 +38,7 @@ public class ACCEMCore implements
     public static boolean isExtravagantEnabled = true;
     public static boolean isSynthesistEnabled = true;
     public static final String EXTRAVAGANT_DEFAULT = Boolean.toString(true);
-    public static final String SYNTHESIST_DEFAULT = Boolean.toString(false); //TESTING
+    public static final String SYNTHESIST_DEFAULT = Boolean.toString(true);
 
     private static SpireConfig CCEMConfig;
 
@@ -47,7 +47,7 @@ public class ACCEMCore implements
     public static ACCEMCore ACCEMCore;
     public static CCEMRelics CCEMRelics;
     public static theextravagant theextravagant;
-    public static SynthesistMain SynthesistMain;
+    public static theSynthesist SynthesistMain;
 
     public ACCEMCore() {
         BaseMod.subscribe(this);
@@ -75,10 +75,12 @@ public class ACCEMCore implements
             theextravagant = new theextravagant();
             logger.info("============CCEM FINISHED INITIALIZING THE EXTRAVAGANT============");
         }
-        if(isSynthesistEnabled)
+        //if(isSynthesistEnabled)
+        //TODO: change this back when actually testing the char and stuff because cha cha being cha cha managed to lock themselves out
+        if(false)
         {
             logger.info("============CCEM NOW INITIALIZING THE SYNTHESIST============");
-            SynthesistMain = new SynthesistMain();
+            SynthesistMain = new theSynthesist();
             logger.info("============CCEM FINISHED INITIALIZING THE SYNTHESIST============");
         }
 

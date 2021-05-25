@@ -3,9 +3,11 @@ package theSynthesist.cards;
 import basemod.abstracts.CustomCard;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theSynthesist.characters.TheSynthesist.Enums.SYNTHESIST_COLOR;
+import static theSynthesist.characters.SynthesistChar.Enums.SYNTHESIST_COLOR;
 
 public abstract class AbstractSynthesistCard extends CustomCard {
+
+    public boolean differentUpgradeDescription;
 
     public AbstractSynthesistCard(
             final String id,
@@ -20,11 +22,15 @@ public abstract class AbstractSynthesistCard extends CustomCard {
     )
     {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        //placeholder for grabbing images
+        //super(id, name, makeCardPath("AcidSplash.png"), cost, rawDescription, type, color, rarity, target);
         isCostModified = false;
         isCostModifiedForTurn = false;
         isDamageModified = false;
         isBlockModified = false;
         isMagicNumberModified = false;
+
+        differentUpgradeDescription = false;
     }
 
     public AbstractSynthesistCard(
@@ -39,6 +45,18 @@ public abstract class AbstractSynthesistCard extends CustomCard {
         this(id, languagePack.getCardStrings(id).NAME, img, cost,
                 languagePack.getCardStrings(id).DESCRIPTION, type, SYNTHESIST_COLOR, rarity, target);
 
+    }
+
+    @Override public void upgrade()
+    {
+        if(!this.upgraded) {
+            if(this.differentUpgradeDescription)
+            {
+                this.rawDescription = languagePack.getCardStrings(this.cardID).UPGRADE_DESCRIPTION;
+            }
+            this.upgradeName();
+            this.initializeDescription();
+        }
     }
 
 }
